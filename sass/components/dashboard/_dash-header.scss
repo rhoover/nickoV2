@@ -1,0 +1,13 @@
+.dash-header {
+  @include span(12 wide of 12 no-gutters);
+  margin-top: rhythm(3.5, 16px);
+  padding: rhythm(.5, 16px) rhythm(1, 16px);
+  border-top: 1px solid rgba(setcolor(green), .35);
+  border-bottom: 1px solid rgba(setcolor(green), .35);
+  @include susy-breakpoint($bp-medium-large, $columns-medium-large) {
+    @include span(21 of 24 no-gutters);
+    margin-left: span(2.75 of 24 no-gutters);
+    margin-right: span(1 of 24 no-gutters);
+    padding: rhythm(.5, 16px) 0;
+  }
+}

@@ -1,0 +1,38 @@
+.home {
+  &-hero {
+    @extend %responsive-trigger;
+    @include span(12 wide of 12 no-gutters);
+    padding: 0 span(1 of 12);
+    // background: setcolor(white);
+    @include susy-breakpoint($bp-medium-large, $columns-medium-large) {
+        margin-bottom: rhythm(2, 16px);
+        padding: 0;
+    }
+    &-lede {
+      text-align: center;
+      font-family: $Roboto-Bold;
+      @extend %t-large;
+      margin-top: rhythm(2, 16px);
+      margin-bottom: 0px;
+      color: setcolor(white);
+      @include susy-breakpoint($bp-medium, $columns-medium) {
+          font-size: 3.5em;
+          margin-top: rhythm(1.75, 16px);
+          text-shadow: rgba(setcolor(green, darker), 1) 1px 1px 0px;
+      }
+    }
+    &-phone {
+      height: rhythm(8, 16px);
+      background-image: linear-gradient(to right, rgba(setcolor(green, lighter), 1), rgba(setcolor(green, lighter) , .98), rgba(setcolor(teal), .95));
+    }
+    &-tablet {
+        @extend %hero-image;
+    }
+    &-laptop {
+        @extend %hero-image;
+    }
+    &-computer {
+        @extend %hero-image;
+    }
+  }
+}
