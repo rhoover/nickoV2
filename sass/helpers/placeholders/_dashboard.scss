@@ -235,7 +235,7 @@
     text-align: center;
     border-bottom: 1px solid rgba(setcolor(green), .35);
     @include susy-breakpoint($bp-medium-large, $columns-medium-large) {
-        margin: rhythm(1, 16px) 0 0 0;
+        // margin: rhythm(1, 16px) 0 0 0;
         border-top: none;
         text-align: left;
     }

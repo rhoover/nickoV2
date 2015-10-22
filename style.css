@@ -4,7 +4,7 @@ Theme Name: nicko
 Theme URI: http://underscores.me/
 Author: Robin Hoover
 Author URI: http://www.moosedog.io
-Description: Underscores Theme Customized for PowerSealUSA
+Description: Underscores Theme Customized for Nicko
 Version: 1.0-wpcom
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -592,7 +592,6 @@ html {
 }
 @media (min-width: 64em) {
   .clients-data-header, .clients-create-header, .jobs-data-header, .jobs-create-header, .invoice-create-header, .invoice-create-data-header, .invoice-create-preview-header {
-    margin: 1.5em 0 0 0;
     border-top: none;
     text-align: left;
   }
@@ -830,6 +829,7 @@ html {
   position: relative;
   margin-bottom: 1.5em;
   padding: 0 6.2656642%;
+  border: none;
 }
 @media (min-width: 64em) {
   .clients-form-field, .jobs-form-field {
@@ -846,6 +846,7 @@ html {
   float: left;
   margin-bottom: 1.5em;
   padding: 0 6.2656642%;
+  border: none;
 }
 @media (min-width: 64em) {
   .clients-form-field-small, .jobs-form-field-small {
@@ -853,6 +854,237 @@ html {
     float: left;
     padding: 0 3.1328321%;
   }
+}
+
+.dash-animate {
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.75s;
+  -o-transition-duration: 0.75s;
+  -webkit-transition-duration: 0.75s;
+  transition-duration: 0.75s;
+}
+
+.dash-animate.ng-enter {
+  -moz-transition-delay: 0.75s;
+  -o-transition-delay: 0.75s;
+  -webkit-transition-delay: 0.75s;
+  transition-delay: 0.75s;
+  -moz-transform: translate3d(-125%, 0, 0);
+  -webkit-transform: translate3d(-125%, 0, 0);
+  transform: translate3d(-125%, 0, 0);
+  height: 0px;
+}
+
+.dash-animate.ng-enter.ng-enter-active {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  height: 100%;
+}
+
+.dash-animate.ng-leave {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  height: 100%;
+}
+
+.dash-animate.ng-leave.ng-leave-active {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(-125%, 0, 0);
+  -webkit-transform: translate3d(-125%, 0, 0);
+  transform: translate3d(-125%, 0, 0);
+  height: 0px;
+}
+
+.clients-data-animate {
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.75s;
+  -o-transition-duration: 0.75s;
+  -webkit-transition-duration: 0.75s;
+  transition-duration: 0.75s;
+}
+
+.clients-data-animate.ng-enter {
+  -moz-transition-delay: 0.75s;
+  -o-transition-delay: 0.75s;
+  -webkit-transition-delay: 0.75s;
+  transition-delay: 0.75s;
+  -moz-transform: translate3d(-125%, 0, 0);
+  -webkit-transform: translate3d(-125%, 0, 0);
+  transform: translate3d(-125%, 0, 0);
+  height: 0px;
+}
+
+.clients-data-animate.ng-enter.ng-enter-active {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  height: 100%;
+}
+
+.clients-data-animate.ng-leave {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.clients-data-animate.ng-leave.ng-leave-active {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(-125%, 0, 0);
+  -webkit-transform: translate3d(-125%, 0, 0);
+  transform: translate3d(-125%, 0, 0);
+  height: 0px;
+}
+
+.details-animate {
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.75s;
+  -o-transition-duration: 0.75s;
+  -webkit-transition-duration: 0.75s;
+  transition-duration: 0.75s;
+}
+
+.details-animate.ng-enter {
+  -moz-transition-delay: 0.75s;
+  -o-transition-delay: 0.75s;
+  -webkit-transition-delay: 0.75s;
+  transition-delay: 0.75s;
+  -moz-transform: translate3d(-125%, 0, 0);
+  -webkit-transform: translate3d(-125%, 0, 0);
+  transform: translate3d(-125%, 0, 0);
+}
+
+.details-animate.ng-enter.ng-enter-active {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.details-animate.ng-leave {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.details-animate.ng-leave.ng-leave-active {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(-125%, 0, 0);
+  -webkit-transform: translate3d(-125%, 0, 0);
+  transform: translate3d(-125%, 0, 0);
+}
+
+.view {
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.75s;
+  -o-transition-duration: 0.75s;
+  -webkit-transition-duration: 0.75s;
+  transition-duration: 0.75s;
+}
+
+.view.ng-enter {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(-100%, 0, 0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  -moz-transition-delay: 0.75s;
+  -o-transition-delay: 0.75s;
+  -webkit-transition-delay: 0.75s;
+  transition-delay: 0.75s;
+}
+
+.view.ng-enter.ng-enter-active {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.view.ng-leave {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.view.ng-leave.ng-leave-active {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(-100%, 0, 0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
 }
 
 html {
@@ -1418,7 +1650,6 @@ html {
 }
 
 .clients-data-header {
-  margin-top: 0px;
   border-bottom: 1px solid rgba(112, 142, 78, 0.35);
 }
 .clients-data-action-search {
@@ -1736,228 +1967,6 @@ html {
   z-index: 2;
   margin: 0;
   cursor: pointer;
-}
-
-.dash-animate {
-  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.75s;
-  -o-transition-duration: 0.75s;
-  -webkit-transition-duration: 0.75s;
-  transition-duration: 0.75s;
-}
-
-.dash-animate.ng-enter {
-  -moz-transition-delay: 0.75s;
-  -o-transition-delay: 0.75s;
-  -webkit-transition-delay: 0.75s;
-  transition-delay: 0.75s;
-  -moz-transform: translate3d(-125%, 0, 0);
-  -webkit-transform: translate3d(-125%, 0, 0);
-  transform: translate3d(-125%, 0, 0);
-  height: 0px;
-}
-
-.dash-animate.ng-enter.ng-enter-active {
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  height: 100%;
-}
-
-.dash-animate.ng-leave {
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.dash-animate.ng-leave.ng-leave-active {
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transform: translate3d(-125%, 0, 0);
-  -webkit-transform: translate3d(-125%, 0, 0);
-  transform: translate3d(-125%, 0, 0);
-  height: 0px;
-}
-
-.dash-create-animate {
-  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.75s;
-  -o-transition-duration: 0.75s;
-  -webkit-transition-duration: 0.75s;
-  transition-duration: 0.75s;
-}
-
-.dash-create-animate.ng-enter {
-  -moz-transition-delay: 0.75s;
-  -o-transition-delay: 0.75s;
-  -webkit-transition-delay: 0.75s;
-  transition-delay: 0.75s;
-  opacity: 0;
-  height: 0px;
-}
-
-.dash-create-animate.ng-enter.ng-enter-active {
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  opacity: 1;
-  height: 100%;
-}
-
-.dash-create-animate.ng-leave {
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  opacity: 1;
-}
-
-.dash-create-animate.ng-leave.ng-leave-active {
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  opacity: 0;
-  height: 100%;
-}
-
-.details-animate {
-  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.75s;
-  -o-transition-duration: 0.75s;
-  -webkit-transition-duration: 0.75s;
-  transition-duration: 0.75s;
-}
-
-.details-animate.ng-enter {
-  -moz-transition-delay: 0.75s;
-  -o-transition-delay: 0.75s;
-  -webkit-transition-delay: 0.75s;
-  transition-delay: 0.75s;
-  -moz-transform: translate3d(-125%, 0, 0);
-  -webkit-transform: translate3d(-125%, 0, 0);
-  transform: translate3d(-125%, 0, 0);
-}
-
-.details-animate.ng-enter.ng-enter-active {
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.details-animate.ng-leave {
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.details-animate.ng-leave.ng-leave-active {
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transform: translate3d(-125%, 0, 0);
-  -webkit-transform: translate3d(-125%, 0, 0);
-  transform: translate3d(-125%, 0, 0);
-}
-
-.view {
-  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.75s;
-  -o-transition-duration: 0.75s;
-  -webkit-transition-duration: 0.75s;
-  transition-duration: 0.75s;
-}
-
-.view.ng-enter {
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transform: translate3d(-100%, 0, 0);
-  -webkit-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0);
-  -moz-transition-delay: 0.75s;
-  -o-transition-delay: 0.75s;
-  -webkit-transition-delay: 0.75s;
-  transition-delay: 0.75s;
-}
-
-.view.ng-enter.ng-enter-active {
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.view.ng-leave {
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.view.ng-leave.ng-leave-active {
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transform: translate3d(-100%, 0, 0);
-  -webkit-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0);
 }
 
 /*

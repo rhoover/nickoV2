@@ -5,9 +5,10 @@
     .module('nickoDash.dash')
     .directive('clientsButton', clientsButton);
 
-  function clientsButton ($animate) {
+  function clientsButton () {
 
     var ddo = {
+      controller: 'DashClientsCtrl',
       link: link,
       restrict: 'A',
       scope: {}
@@ -16,17 +17,9 @@
 
     ////////////////
 
-    function link(scope, element, attrs) {
-
+    function link(scope, element, attrs, parentCtrl) {
       element.on('click', function () {
-        if (attrs.toggle === 'add') {
-          scope.$apply(function () {
-            var addClient = angular.element(document.querySelector('.clients-create'));
-            console.log(addClient);
-          });
-        } else {
-          var viewClients = document.querySelector('.clients-data');
-        };
+        scope.$applyAsync(attrs.clientsButton);
       });
     }
   }
