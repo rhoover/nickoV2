@@ -3,17 +3,23 @@
 
   angular
     .module('nickoDash.dash')
-    .controller('DashCtrl', DashCtrl);
+    .directive('companyNameHeader', companyNameHeader);
 
-  function DashCtrl($location, authStore, userCompanyMeta) {
-    /*jshint validthis: true */
-    var dash = this;
+  function companyNameHeader (authStore, userCompanyMeta) {
 
-    companyHeader();
+    var ddo = {
+      controller: header,
+      controllerAs: 'dash',
+      restrict: 'A',
+      scope: {},
+      template: '{{dash.name}}'
+    };
+    return ddo;
 
     ////////////////
 
-    function companyHeader() {
+    function header() {
+      var dash = this;
       var authStuff = authStore.sessionGetData('authStuff');
       if (authStuff != null) {
         authStore.setAuthCookie(authStuff);
@@ -26,10 +32,9 @@
         var authUID = authStore.fetchAuthCookie();
         userCompanyMeta.fetch(authUID)
           .then(function (companyMetaObject) {
-              dash.name = companyMetaObject.companyname;
+            dash.name = companyMetaObject.companyname;
           });
       }
     }
-
   }
 })();

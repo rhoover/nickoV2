@@ -5,7 +5,7 @@
     .module('nickoDash.dash')
     .controller('DashClientsCtrl', DashClientsCtrl);
 
-  function DashClientsCtrl($scope, $location, $window, dashDataSortFilter, clientsList) {
+  function DashClientsCtrl($scope, $location, $window, dashDataSortFilter, clientsList, fetchInvoiceOptions, fetchStates) {
     /*jshint validthis: true */
     var dashClients = this;
     dashClients.toggle = {switch: true};
@@ -13,7 +13,8 @@
     refreshKey();
     clientList();
     innerViewToggle();
-    // invoiceOccurrence();
+    invoiceOccurrence();
+    statesList();
 
     ////////////////
 
@@ -23,7 +24,7 @@
         angular.element($window).bind('keydown keypress', function (event) {
           if (event.which === 116 || event.keyCode === 116) {
             $scope.$apply(function () {
-              event.preventDefault();
+              // event.preventDefault();
               $location.path('/dashboard/');
             });
           }
@@ -40,19 +41,23 @@
       }
 
     function innerViewToggle() {
-      $scope.showClientForm = function () {
-        $scope.$parent.dashClients.toggle.switch = !$scope.$parent.dashClients.toggle.switch;
-      }
-      $scope.showClientList = function () {
-        $scope.$parent.dashClients.toggle.switch = !$scope.$parent.dashClients.toggle.switch;
+      $scope.switchSubView = function () {
+        dashClients.toggle.switch = !dashClients.toggle.switch;
       }
     }
 
-    // function invoiceOccurrence() {
-    //   fetchInvoiceOptions.invoicesList()
-    //     .then(function (occurrences) {
-    //       dashClients.occurrences = occurrences;
-    //     });
-    // }
+    function statesList() {
+      fetchStates.unitedStates()
+        .then(function (usStatesList) {
+          dashClients.states = usStatesList;
+        });
+    }
+
+    function invoiceOccurrence() {
+      fetchInvoiceOptions.invoicesList()
+        .then(function (occurrences) {
+          dashClients.occurrences = occurrences;
+        });
+    }
   }
 })();

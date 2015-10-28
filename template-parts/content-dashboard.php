@@ -18,7 +18,7 @@
   <div data-menu-nav-button = "/dashboard/help" class="dash-nav-item"><span class="dash-nav-item-help"></span>Help</div>
 </nav>
 
-<h2 class="dash-header">{{dash.name}}</h2>
+<h2 data-company-name-header class="dash-header"></h2>
 
 <section data-ng-view="" class="dash dash-animate"></section>
 

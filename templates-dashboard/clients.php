@@ -1,11 +1,11 @@
 <script type="text/ng-template" id="clients.html">
 
-
-  <section class="clients-action">
-    <p data-clients-button="showClientForm()" data-ng-class="active" class="clients-action-add">Add A Client</p>
-    <p data-clients-button="showClientList()" class="clients-action-view">View Client List</p>
+  <section data-clients-button data-subview class="clients-action">
+    <p data-clients="addClient" class="clients-action-add">Add A Client</p>
+    <p data-clients="viewList" class="clients-action-view">View Client List</p>
   </section>
 
+  <!-- Clients List -->
   <section class="clients-data">
 
     <section data-ng-if="dashClients.toggle.switch" class="clients-data-list clients-data-animate">
@@ -46,6 +46,7 @@
       </div>
     </section>
 
+    <!-- Clients Form -->
     <section data-ng-if="!dashClients.toggle.switch" class="clients-data-create clients-data-animate">
 
       <h3 class="clients-create-header">Create A New Client</h3>

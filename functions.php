@@ -216,6 +216,7 @@ function nicko_dash_scripts() {
     wp_enqueue_script('nickoDashDataSort', get_template_directory_uri() . '/app-dash/utilities/global/dashDataSort-filter.js', array(), null, true);
     wp_enqueue_script('nickoDashFetchClients', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchClients-factory.js', array(), null, true);
     wp_enqueue_script('nickoDashFetchInvoiceOptions', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchInvoiceOptions-factory.js', array(), null, true);
+    wp_enqueue_script('nickoDashFetchStates', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchStates-factory.js', array(), null, true);
     wp_enqueue_script('nickoDashFirebaseURL', get_template_directory_uri() . '/app-dash/utilities/firebase/root-url-constant.js', array(), null, true);
     wp_enqueue_script('nickoDashAuthStore', get_template_directory_uri() . '/app-dash/utilities/stores/authStore-factory.js', array(), null, true);
     wp_enqueue_script('nickoDashCompanyStore', get_template_directory_uri() . '/app-dash/utilities/stores/userCompanyMetaStore-factory.js', array(), null, true);
@@ -224,9 +225,9 @@ function nicko_dash_scripts() {
     wp_enqueue_script('nickoDashModule', get_template_directory_uri() . '/app-dash/dashboard/nickoDash-dash-module.js', array(), null, true);
 
 
-    wp_enqueue_script('nickoDashCtrl', get_template_directory_uri() . '/app-dash/dashboard/DashCtrl-controller.js', array(), null, true);
-    wp_enqueue_script('nickoDashUCM', get_template_directory_uri() . '/app-dash/dashboard/userCompanyMeta-factory.js', array(), null, true);
-    wp_enqueue_script('nickoDashMenuNav', get_template_directory_uri() . '/app-dash/dashboard/menuNavButton-directive.js', array(), null, true);
+    wp_enqueue_script('nickoDashUCM', get_template_directory_uri() . '/app-dash/dashboard/global/userCompanyMeta-factory.js', array(), null, true);
+        wp_enqueue_script('nickoCompanyHeader', get_template_directory_uri() . '/app-dash/dashboard/global/companyNameHeader-directive.js', array(), null, true);
+    wp_enqueue_script('nickoDashMenuNav', get_template_directory_uri() . '/app-dash/dashboard/menu/menuNavButton-directive.js', array(), null, true);
     wp_enqueue_script('nickoDashHomeCtrl', get_template_directory_uri() . '/app-dash/dashboard/home/DashHomeCtrl-controller.js', array(), null, true);
     wp_enqueue_script('nickoDashClientsCtrl', get_template_directory_uri() . '/app-dash/dashboard/clients/DashClientsCtrl-controller.js', array(), null, true);
     wp_enqueue_script('nickoDashClientsBtn', get_template_directory_uri() . '/app-dash/dashboard/clients/clientsButton-directive.js', array(), null, true);
@@ -235,11 +236,12 @@ function nicko_dash_scripts() {
     wp_enqueue_script('nickoDashSettingsCtrl', get_template_directory_uri() . '/app-dash/dashboard/settings/DashSettingsCtrl-controller.js', array(), null, true);
     wp_enqueue_script('nickoDashHelpCtrl', get_template_directory_uri() . '/app-dash/dashboard/help/DashHelpCtrl-controller.js', array(), null, true);
 
+
   } //end !admin
 
 } //end niko_dash_scripts
 
-} //end if file_exists, ie add post-grunt files with else {} here
+} //end if file_exists, ie add post-grunt concatenated files with else {} here
 
 /**
 *Add Template Scripts to Dashboard
