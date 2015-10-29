@@ -189,7 +189,6 @@ if (file_exists($localConfig)) {
         wp_enqueue_script('nickoLogin', get_template_directory_uri() . '/app-site/pages/login/LoginCtrl-controller.js', array(), null, true);
         wp_enqueue_script('nickoLoginFactory', get_template_directory_uri() . '/app-site/pages/login/logIn-factory.js', array(), null, true);
         wp_enqueue_script('nickoLoginRoles', get_template_directory_uri() . '/app-site/pages/login/roleTest-factory.js', array(), null, true);
-        wp_enqueue_script('nickoLoginAmazon', get_template_directory_uri() . '/app-site/pages/login/writeAmazon-directive.js', array(), null, true);
 
         wp_enqueue_script('nickoDetails', get_template_directory_uri() . '/app-site/pages/details/DetailsCtrl-controller.js', array(), null, true);
         wp_enqueue_script('nickoDetailsFactory', get_template_directory_uri() . '/app-site/pages/details/details-factory.js', array(), null, true);

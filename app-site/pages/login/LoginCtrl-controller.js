@@ -26,7 +26,7 @@
                 logIn.firebaseLogIn(dataFromForm)
                     .then(function (roleTestResults) {
                         $scope.$evalAsync(function () {
-                            $window.location.href = $location.host() + '/' + roleTestResults;
+                            $window.location.href = '/' + roleTestResults + '/';
                         });
                     });
             };
