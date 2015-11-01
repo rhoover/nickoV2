@@ -153,11 +153,11 @@ if (file_exists($localConfig)) {
   function nicko_third_party() {
 
       if( !is_admin() ) {
-          wp_enqueue_script('angularfire', get_template_directory_uri() . '/libs/angularfire/dist/angularfire.js', array(), null, true);
-          wp_enqueue_script('pikaday-angular', get_template_directory_uri() . '/libs/pikaday-angular/pikaday-angular.js', array(), null, true);
-          wp_enqueue_script('pikaday', get_template_directory_uri() . '/libs/pikaday/pikaday.js', array(), null, true);
-          wp_enqueue_script('moment', get_template_directory_uri() . '/libs/moment/moment.js', array(), null, true);
           wp_enqueue_script('firebase', get_template_directory_uri() . '/libs/firebase/firebase.js', array(), null, true);
+          wp_enqueue_script('angularfire', get_template_directory_uri() . '/libs/angularfire/dist/angularfire.js', array(), null, true);
+          wp_enqueue_script('moment', get_template_directory_uri() . '/libs/moment/moment.js', array(), null, true);
+          wp_enqueue_script('pikaday', get_template_directory_uri() . '/libs/pikaday/pikaday.js', array(), null, true);
+          wp_enqueue_script('pikaday-angular', get_template_directory_uri() . '/libs/pikaday-angular/pikaday-angular.js', array(), null, true);
       }
 
   } //end third_party
