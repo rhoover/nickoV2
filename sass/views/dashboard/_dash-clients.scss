@@ -109,6 +109,9 @@
                     @extend %dash-content-item-action;
                     &-edit {
                         @extend %dash-content-item-action-type;
+                        @include expando-hover(green, base, .1);
+                        background-color: rgba(setcolor(green, lighter), .05);
+                        border: .2em solid rgba(setcolor(green, lighter), .45);
                         &> p:before {
                             content: "";
                             float: left;
@@ -121,6 +124,9 @@
                     }
                     &-delete {
                         @extend %dash-content-item-action-type;
+                        @include expando-hover(red, base, .1);
+                        background-color: rgba(setcolor(red, lighter), .05);
+                        border: .2em solid rgba(setcolor(red, lighter), .45);
                         float: right;
                         &> p:before {
                             content: "";
