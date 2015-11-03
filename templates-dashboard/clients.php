@@ -110,8 +110,7 @@
 
         <!-- State -->
         <fieldset class="clients-form-field-small">
-          <select name="state" data-ng-model="dashClients.newcustomer.state" data-ng-keyup="cancel($event)" data-ng-options="state.name for state in dashClients.states" data-required class="clients-form-select">
-            <option value="" ng-if="false"></option>
+          <select name="state" data-ng-model="dashClients.newcustomer.state" data-ng-keyup="cancel($event)" data-ng-options="state.name for state in dashClients.states track by state.$id" data-required class="clients-form-select">
           </select>
           <ng-messages for="dashClients.newCustomer.state.$error" class="clients-form-messages">
             <ng-message when="required" class="clients-form-messages-required">Required</ng-message>
@@ -160,8 +159,7 @@
 
         <!-- Invoicing Frequency -->
         <fieldset class="clients-form-field-small">
-          <select name="occurrence" data-ng-model="dashClients.newcustomer.invoiceOccurrence" data-ng-keyup="cancel($event)" data-ng-options="occurrence.name for occurrence in dashClients.occurrences" class="clients-form-select">
-            <option value="" ng-if="false"></option>
+          <select name="occurrence" data-ng-model="dashClients.newcustomer.invoiceOccurrence" data-ng-keyup="cancel($event)" data-ng-options="occurrence.name for occurrence in dashClients.occurrences track by occurrence.$id" class="clients-form-select">
           </select>
           <ng-messages for="dashClients.newCustomer.occurrence.$error" class="signup-messages">
             <p data-ng-class="{ 'clients-form-messages-valid':dashClients.newCustomer.occurrence.$dirty}" class="clients-form-messages-hide-valid">Cool, looks good!</p>
@@ -170,8 +168,7 @@
 
         <!-- Job Type -->
         <fieldset class="clients-form-field-small">
-          <select name="jobType" data-ng-model="dashClients.newcustomer.jobType" data-ng-keyup="cancel($event)" data-ng-options="jobType.type for jobType in dashClients.jobTypes" class="clients-form-select">
-            <option value="" ng-if="false"></option>
+          <select name="jobType" data-ng-model="dashClients.newcustomer.jobType" data-ng-keyup="cancel($event)" data-ng-options="jobType.name for jobType in dashClients.jobTypes track by jobType.$id" class="clients-form-select">
           </select>
           <ng-messages for="dashClients.newCustomer.jobType.$error" class="clients-form-messages">
             <p data-ng-class="{ 'clients-form-messages-valid':dashClients.newCustomer.jobType.$dirty}" class="clients-form-messages-hide-valid">Cool, looks good!</p>

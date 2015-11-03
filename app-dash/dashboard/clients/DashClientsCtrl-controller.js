@@ -5,7 +5,7 @@
     .module('nickoDash.dash')
     .controller('DashClientsCtrl', DashClientsCtrl);
 
-  function DashClientsCtrl($scope, $location, $window, dashDataSortFilter, clientsList, fetchInvoiceOptions, fetchStates) {
+  function DashClientsCtrl($scope, $location, $window, dashDataSortFilter, clientsList, fetchInvoiceOptions, fetchStates, fetchJobFreqs) {
     /*jshint validthis: true */
     var dashClients = this;
     dashClients.toggle = {switch: true};
@@ -15,6 +15,7 @@
     innerViewToggle();
     invoiceOccurrence();
     statesList();
+    jobFrequency();
 
     ////////////////
 
@@ -57,6 +58,13 @@
       fetchInvoiceOptions.invoicesList()
         .then(function (occurrences) {
           dashClients.occurrences = occurrences;
+        });
+    }
+
+    function jobFrequency() {
+      fetchJobFreqs.frequencyList()
+        .then(function (jobTypes) {
+          dashClients.jobTypes = jobTypes;
         });
     }
   }
