@@ -32,7 +32,7 @@
           }
 
           invoiceOccArray.splice(0, 0, pickMeInvoice);
-console.log(invoiceOccArray);
+
           return invoiceOccArray;
         });
     }

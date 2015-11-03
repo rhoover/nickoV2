@@ -31,7 +31,7 @@
               id: 'pickme'
           };
           frequencyArray.splice(0, 0, pickMeFrequency);
-console.log(frequencyArray);
+
           return frequencyArray;
       });
     }
