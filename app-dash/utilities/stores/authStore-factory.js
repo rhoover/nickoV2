@@ -10,8 +10,8 @@
         var factoryAPI = {
             sessionGetData: sessionGetData,
             sessionRemoveData: sessionRemoveData,
-            setAuthCookie: setAuthCookie,
-            fetchAuthCookie: fetchAuthCookie
+            setIDCookie: setIDCookie,
+            fetchIDCookie: fetchIDCookie
         };
         return factoryAPI;
 
@@ -25,11 +25,11 @@
             sessionStorage.removeItem(key);
         }
 
-        function setAuthCookie(authData) {
+        function setIDCookie(authData) {
             $cookies.put('AUID', authData);
         }
 
-        function fetchAuthCookie() {
+        function fetchIDCookie() {
             var authCookie = $cookies.get('AUID');
             return authCookie;
         }

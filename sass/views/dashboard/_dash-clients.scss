@@ -230,3 +230,8 @@
 
     } //end -form
 } //end -clients
+
+.clients-data-list {
+    @extend %dash-create;
+    padding: 0;
+}

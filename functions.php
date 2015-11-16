@@ -226,12 +226,17 @@ function nicko_dash_scripts() {
 
 
     wp_enqueue_script('nickoDashUCM', get_template_directory_uri() . '/app-dash/dashboard/global/userCompanyMeta-factory.js', array(), null, true);
-        wp_enqueue_script('nickoCompanyHeader', get_template_directory_uri() . '/app-dash/dashboard/global/companyNameHeader-directive.js', array(), null, true);
+    wp_enqueue_script('nickoCompanyHeader', get_template_directory_uri() . '/app-dash/dashboard/global/companyNameHeader-directive.js', array(), null, true);
+
     wp_enqueue_script('nickoDashMenuNav', get_template_directory_uri() . '/app-dash/dashboard/menu/menuNavButton-directive.js', array(), null, true);
     wp_enqueue_script('nickoDashHomeCtrl', get_template_directory_uri() . '/app-dash/dashboard/home/DashHomeCtrl-controller.js', array(), null, true);
+
     wp_enqueue_script('nickoDashClientsCtrl', get_template_directory_uri() . '/app-dash/dashboard/clients/DashClientsCtrl-controller.js', array(), null, true);
     wp_enqueue_script('nickoDashClientsBtn', get_template_directory_uri() . '/app-dash/dashboard/clients/clientsButton-directive.js', array(), null, true);
+    wp_enqueue_script('nickoDashAddClient', get_template_directory_uri() . '/app-dash/dashboard/clients/clientsAdd-factory.js', array(), null, true);
+
     wp_enqueue_script('nickoDashJobsCtrl', get_template_directory_uri() . '/app-dash/dashboard/jobs/DashJobsCtrl-controller.js', array(), null, true);
+
     wp_enqueue_script('nickoDashInvoicesCtrl', get_template_directory_uri() . '/app-dash/dashboard/invoices/DashInvoicesCtrl-controller.js', array(), null, true);
     wp_enqueue_script('nickoDashSettingsCtrl', get_template_directory_uri() . '/app-dash/dashboard/settings/DashSettingsCtrl-controller.js', array(), null, true);
     wp_enqueue_script('nickoDashHelpCtrl', get_template_directory_uri() . '/app-dash/dashboard/help/DashHelpCtrl-controller.js', array(), null, true);
@@ -249,22 +254,22 @@ function nicko_dash_scripts() {
 function dashboard_templates() {
 
   if( !is_admin() && is_page('Dashboard') ) {
-      $server_path = $_SERVER['DOCUMENT_ROOT'] . '/wp-content/themes/nicko/templates-dashboard';
-      $templates = array(
-          $server_path . '/home.php',
-          $server_path . '/clients.php',
-          $server_path . '/jobs.php',
-          $server_path . '/invoices.php',
-          $server_path . '/settings.php',
-          $server_path . '/help.php'
-          );
+    $server_path = $_SERVER['DOCUMENT_ROOT'] . '/wp-content/themes/nicko/templates-dashboard';
+    $templates = array(
+        $server_path . '/home.php',
+        $server_path . '/clients.php',
+        $server_path . '/jobs.php',
+        $server_path . '/invoices.php',
+        $server_path . '/settings.php',
+        $server_path . '/help.php'
+        );
 
-      foreach ($templates as $template) {
-          echo file_get_contents($template);
-      }
+    foreach ($templates as $template) {
+        echo file_get_contents($template);
+    }
   }
 }
-  add_action('wp_footer', 'dashboard_templates');
+add_action('wp_footer', 'dashboard_templates');
 
 /**
 * Implement the Custom Header feature.

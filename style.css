@@ -38,8 +38,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   src: url('fonts/Roboto-Bold.eot?312782400');
   src: url('fonts/Roboto-Bold.eot?&312782400#iefix') format('embedded-opentype'), url('fonts/Roboto-Bold.woff?312782400') format('woff'), url('fonts/Roboto-Bold.ttf?312782400') format('truetype'), url('fonts/Roboto-Bold.svg?312782400') format('svg');
 }
-.icons-sprite, .icons-accounts-small, .icons-accounts, .dash-nav-item-invoice, .icons-add-small, .settings-hero-add:before, .icons-add, .icons-clients-small, .icons-clients, .dash-nav-item-clients, .icons-delete-small, .settings-hero-delete:before, .clients-data-content-item-action-delete > p:before, .jobs-data-content-item-action-delete > p:before, .icons-delete, .icons-edit-small, .settings-hero-edit:before, .clients-data-content-item-action-edit > p:before, .jobs-data-content-item-action-edit > p:before, .icons-edit, .icons-hassle, .home-branding-what-hassle:before, .icons-help-small, .icons-help, .dash-nav-item-help, .icons-home-small, .icons-home, .dash-nav-item-home, .icons-jobs-small, .icons-jobs, .dash-nav-item-jobs, .icons-scrollup, .icons-search-small, .icons-search, .icons-settings-small, .icons-settings, .dash-nav-item-settings, .icons-solve, .home-branding-what-solve:before, .icons-trash-small, .icons-trash, .icons-who, .home-branding-what-who:before {
-  background-image: url('images/icons-sf19cfd757c.png');
+.icons-sprite, .icons-accounts-small, .icons-accounts, .dash-nav-item-invoice, .icons-add-small, .settings-hero-add:before, .icons-add, .icons-clients-small, .icons-clients, .dash-nav-item-clients, .icons-delete-small, .settings-hero-delete:before, .clients-data-content-item-action-delete > p:before, .jobs-data-content-item-action-delete > p:before, .icons-delete, .icons-edit-small, .settings-hero-edit:before, .clients-data-content-item-action-edit > p:before, .jobs-data-content-item-action-edit > p:before, .icons-edit, .icons-hassle, .home-branding-what-hassle:before, .icons-help-small, .icons-help, .dash-nav-item-help, .icons-home-small, .icons-home, .dash-nav-item-home, .icons-jobs-small, .icons-jobs, .dash-nav-item-jobs, .icons-logo, .icons-scrollup, .icons-search-small, .icons-search, .icons-settings-small, .icons-settings, .dash-nav-item-settings, .icons-solve, .home-branding-what-solve:before, .icons-trash-small, .icons-trash, .icons-who, .home-branding-what-who:before {
+  background-image: url('images/icons-s0050fa44a3.png');
   background-repeat: no-repeat;
 }
 
@@ -111,40 +111,44 @@ Use it to make something cool, have fun, and share what you've learned with othe
   background-position: 0 -390px;
 }
 
-.icons-scrollup {
+.icons-logo {
   background-position: 0 -420px;
 }
 
+.icons-scrollup {
+  background-position: 0 -520px;
+}
+
 .icons-search-small {
-  background-position: 0 -450px;
+  background-position: 0 -550px;
 }
 
 .icons-search {
-  background-position: 0 -465px;
+  background-position: 0 -565px;
 }
 
 .icons-settings-small {
-  background-position: 0 -495px;
+  background-position: 0 -595px;
 }
 
 .icons-settings, .dash-nav-item-settings {
-  background-position: 0 -510px;
+  background-position: 0 -610px;
 }
 
 .icons-solve, .home-branding-what-solve:before {
-  background-position: 0 -540px;
+  background-position: 0 -640px;
 }
 
 .icons-trash-small {
-  background-position: 0 -600px;
+  background-position: 0 -700px;
 }
 
 .icons-trash {
-  background-position: 0 -615px;
+  background-position: 0 -715px;
 }
 
 .icons-who, .home-branding-what-who:before {
-  background-position: 0 -645px;
+  background-position: 0 -745px;
 }
 
 html {
@@ -572,12 +576,12 @@ html {
   }
 }
 
-.clients-create, .jobs-create {
+.clients-create, .clients-data-list, .jobs-create {
   width: 100%;
   float: left;
 }
 @media (min-width: 64em) {
-  .clients-create, .jobs-create {
+  .clients-create, .clients-data-list, .jobs-create {
     padding: 0 23.9661654%;
   }
 }
@@ -960,6 +964,7 @@ html {
   -moz-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+  height: 100%;
 }
 
 .clients-data-animate.ng-leave.ng-leave-active {
@@ -1766,6 +1771,10 @@ html {
 }
 .clients-form-submit-disabled {
   margin-bottom: 3em;
+}
+
+.clients-data-list {
+  padding: 0;
 }
 
 .jobs-data-header {

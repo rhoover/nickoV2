@@ -5,7 +5,7 @@
     .module('nickoDash.dash')
     .controller('DashClientsCtrl', DashClientsCtrl);
 
-  function DashClientsCtrl($scope, $location, $window, dashDataSortFilter, clientsList, fetchInvoiceOptions, fetchStates, fetchJobFreqs) {
+  function DashClientsCtrl($scope, $location, $window, dashDataSortFilter, clientsList, fetchInvoiceOptions, fetchStates, fetchJobFreqs, clientsAdd) {
     /*jshint validthis: true */
     var dashClients = this;
     dashClients.toggle = {switch: true};
@@ -16,13 +16,14 @@
     invoiceOccurrence();
     statesList();
     jobFrequency();
+    createClient();
 
     ////////////////
 
     function refreshKey() {
       var dashView = $location.path();
       if (dashView = '/dashboard/clients') {
-        angular.element($window).bind('keydown keypress', function (event) {
+        angular.element($window).bind('keydown keyup', function (event) {
           if (event.which === 116 || event.keyCode === 116) {
             $scope.$apply(function () {
               // event.preventDefault();
@@ -66,6 +67,24 @@
         .then(function (jobTypes) {
           dashClients.jobTypes = jobTypes;
         });
+    }
+    function createClient() {
+
+      dashClients.createNewCustomer = function (dataFromForm) {
+        clientsAdd.createClient(dataFromForm)
+          .then(function (switchData) {
+            dashClients.newcustomer = null;
+            $scope.$evalAsync(function () {
+              clientsList.fetchClients()
+                .then(function (clientsListData) {
+                  var sortedDsc = dashDataSortFilter.sortDsc(clientsListData);
+                  // dashClients.clients = clientsListData;
+                  dashClients.clients = sortedDsc;
+                  $scope.switch = switchData;
+                });
+            });
+          });
+      }
     }
   }
 })();

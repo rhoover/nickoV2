@@ -16,8 +16,8 @@
         ////////////////
 
         function link(scope, element, attrs) {
-            element.bind('keydown keyup keypress', function (event) {
-                if(event.which === 13) {
+            element.bind('keydown keyup', function (event) {
+                if(event.which === 13 || event.keyCode === 13) {
                     event.preventDefault();
                     element[0].blur();
                 }

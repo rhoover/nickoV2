@@ -5,7 +5,7 @@
     .module('nickoDash.dash')
     .directive('companyNameHeader', companyNameHeader);
 
-  function companyNameHeader (authStore, userCompanyMeta) {
+  function companyNameHeader (authStore, userCompanyMeta, fbRootUrl) {
 
     var ddo = {
       controller: header,
@@ -20,16 +20,24 @@
 
     function header() {
       var dash = this;
-      var authStuff = authStore.sessionGetData('authStuff');
-      if (authStuff != null) {
-        authStore.setAuthCookie(authStuff);
-        userCompanyMeta.fetch(authStuff)
+      var rootRef = new Firebase(fbRootUrl);
+      var getAuthData = rootRef.getAuth();
+      var sessionToken = authStore.sessionGetData('tokenStuff');
+      if (getAuthData.token === sessionToken) {
+        console.log('Thats a BINGO!!!');
+      } else {
+        console.log("Fuck My Life");
+      }
+      var idStuff = authStore.sessionGetData('uidStuff');
+      if (idStuff != null) {
+        authStore.setIDCookie(idStuff);
+        userCompanyMeta.fetch(idStuff)
           .then(function (companyMetaObject) {
               dash.name = companyMetaObject.companyname;
           });
-        authStore.sessionRemoveData('authStuff');
+        authStore.sessionRemoveData('uidStuff');
       } else {
-        var authUID = authStore.fetchAuthCookie();
+        var authUID = authStore.fetchIDCookie();
         userCompanyMeta.fetch(authUID)
           .then(function (companyMetaObject) {
             dash.name = companyMetaObject.companyname;

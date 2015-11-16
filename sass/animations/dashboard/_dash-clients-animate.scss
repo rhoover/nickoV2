@@ -16,6 +16,7 @@
 .clients-data-animate.ng-leave {
   @include transition-property(all);
   @include translate3d(0, 0, 0);
+  height: 100%;
 }
 .clients-data-animate.ng-leave.ng-leave-active {
   @include transition-property(all);

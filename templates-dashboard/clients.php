@@ -55,7 +55,7 @@
 
         <!-- Full Name -->
         <fieldset class="clients-form-field">
-          <input type="text" name="fullname" data-ng-model="dashClients.newcustomer.fullname" data-prevent-enter data-ng-keyup="cancel($event)" data-input-field-display data-ng-minlength="2" data-ng-maxlength="50" data-required class="clients-form-input">
+          <input type="text" name="fullname" data-ng-model="dashClients.newcustomer.fullname" data-prevent-enter  data-input-field-display data-ng-minlength="2" data-ng-maxlength="50" data-required class="clients-form-input">
           <label for="fullname" class="clients-form-label">
             <span class="clients-form-label-text">Full Name</span>
           </label>
