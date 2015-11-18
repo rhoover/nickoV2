@@ -77,6 +77,8 @@
 >
 
     <header class="header">
+        <?php $theme_root = get_template_directory_uri(); ?>
+        <img src="<?php echo $theme_root . '/images/logo.png' ?>" class="header-logo">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header-text"><?php bloginfo( 'name' ); ?></a>
 
 <!--         <nav id="site-navigation" class="main-navigation" role="navigation">
@@ -92,6 +94,8 @@
             echo "data-ng-controller=\"LoginCtrl as login\"  ";
         } elseif (is_page('Details')) {
             echo "data-ng-controller=\"DetailsCtrl as details\"  ";
+        } elseif (is_page('Dashboard')) {
+            echo "data-dash-init";
         }
 
 

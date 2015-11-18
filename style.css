@@ -2,9 +2,9 @@
 Welcome To Compass
 Theme Name: nicko
 Theme URI: http://underscores.me/
+Description: Underscores Theme Customized for Nicko
 Author: Robin Hoover
 Author URI: http://www.moosedog.io
-Description: Underscores Theme Customized for Nicko
 Version: 1.0-wpcom
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -39,7 +39,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   src: url('fonts/Roboto-Bold.eot?&312782400#iefix') format('embedded-opentype'), url('fonts/Roboto-Bold.woff?312782400') format('woff'), url('fonts/Roboto-Bold.ttf?312782400') format('truetype'), url('fonts/Roboto-Bold.svg?312782400') format('svg');
 }
 .icons-sprite, .icons-accounts-small, .icons-accounts, .dash-nav-item-invoice, .icons-add-small, .settings-hero-add:before, .icons-add, .icons-clients-small, .icons-clients, .dash-nav-item-clients, .icons-delete-small, .settings-hero-delete:before, .clients-data-content-item-action-delete > p:before, .jobs-data-content-item-action-delete > p:before, .icons-delete, .icons-edit-small, .settings-hero-edit:before, .clients-data-content-item-action-edit > p:before, .jobs-data-content-item-action-edit > p:before, .icons-edit, .icons-hassle, .home-branding-what-hassle:before, .icons-help-small, .icons-help, .dash-nav-item-help, .icons-home-small, .icons-home, .dash-nav-item-home, .icons-jobs-small, .icons-jobs, .dash-nav-item-jobs, .icons-logo, .icons-scrollup, .icons-search-small, .icons-search, .icons-settings-small, .icons-settings, .dash-nav-item-settings, .icons-solve, .home-branding-what-solve:before, .icons-trash-small, .icons-trash, .icons-who, .home-branding-what-who:before {
-  background-image: url('images/icons-s0050fa44a3.png');
+  background-image: url('images/icons-s2382852bef.png');
   background-repeat: no-repeat;
 }
 
