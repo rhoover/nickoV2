@@ -178,7 +178,6 @@ if (file_exists($localConfig)) {
         wp_enqueue_script('nickoPreventEnter', get_template_directory_uri() . '/app-site/utilities/global/preventEnter-directive.js', array(), null, true);
         wp_enqueue_script('nickoButtonClick', get_template_directory_uri() . '/app-site/utilities/global/buttonClick-directive.js', array(), null, true);
         wp_enqueue_script('nickoFirebaseURL', get_template_directory_uri() . '/app-site/utilities/firebase/root-url-constant.js', array(), null, true);
-        wp_enqueue_script('nickoAuthStore', get_template_directory_uri() . '/app-site/utilities/stores/authStore-factory.js', array(), null, true);
         wp_enqueue_script('nickoCompanyStore', get_template_directory_uri() . '/app-site/utilities/stores/userCompanyMetaStore-factory.js', array(), null, true);
         wp_enqueue_script('nickoCrewStore', get_template_directory_uri() . '/app-site/utilities/stores/crewLeaderStore-factory.js', array(), null, true);
 
@@ -218,8 +217,6 @@ function nicko_dash_scripts() {
     wp_enqueue_script('nickoDashFetchJobFreqs', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchJobFreqs-factory.js', array(), null, true);
     wp_enqueue_script('nickoDashFetchStates', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchStates-factory.js', array(), null, true);
     wp_enqueue_script('nickoDashFirebaseURL', get_template_directory_uri() . '/app-dash/utilities/firebase/root-url-constant.js', array(), null, true);
-    wp_enqueue_script('nickoDashAuthStore', get_template_directory_uri() . '/app-dash/utilities/stores/authStore-factory.js', array(), null, true);
-    wp_enqueue_script('nickoDashCompanyStore', get_template_directory_uri() . '/app-dash/utilities/stores/userCompanyMetaStore-factory.js', array(), null, true);
     wp_enqueue_script('nickoDashCrewStore', get_template_directory_uri() . '/app-dash/utilities/stores/crewLeaderStore-factory.js', array(), null, true);
 
     wp_enqueue_script('nickoDashModule', get_template_directory_uri() . '/app-dash/dashboard/nickoDash-dash-module.js', array(), null, true);

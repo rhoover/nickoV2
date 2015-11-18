@@ -5,7 +5,7 @@
       .module('nickoSite.pages')
       .factory('logIn', logIn);
 
-  function logIn($firebaseAuth, fbRootUrl, authStore, roleTest) {
+  function logIn($cookies, $firebaseAuth, fbRootUrl, roleTest) {
 
     var factoryAPI = {
       firebaseLogIn: firebaseLogIn
@@ -29,19 +29,18 @@
           var logInData = {
             email: dataFromForm.email,
             password: dataFromForm.password
-          }
-          // authStore.setCache(authData);
-          // authStore.setloginCache(logInData);
-          // logRef.child(authData.uid).child('log' + ':' + rightNow).set({'login': rightNow});
-          // logRef.child(authData.uid).set({'logToken': authData.token});
-          authStore.sessionStoreData('uidStuff', authData.uid);
-          authStore.sessionStoreData('tokenStuff', authData.token);
+          };
+
+          $cookies.put('AUID', authData.uid);
+          $cookies.put('ATOK', authData.token);
+
           logRef.child(authData.uid)
             .child('log' + ':' + rightNow)
             .set({
               'login': rightNow,
               'token': authData.token
             });
+
           return authData.uid;
         })
 

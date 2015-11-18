@@ -15,7 +15,7 @@
     ////////////////
 
     function fetchClients() {
-      var user = authStore.fetchAuthCookie();
+      var user = authStore.fetchIDCookie();
       var clientsRef = new Firebase(fbRootUrl + '/userClients' + '/' + user);
       var clientsArray = $firebaseArray(clientsRef);
 
