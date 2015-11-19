@@ -5,7 +5,7 @@
     .module('nickoDash.dash')
     .factory('clientsAdd', clientsAdd);
 
-  function clientsAdd($firebaseAuth, $firebaseArray, fbRootUrl, authStore) {
+  function clientsAdd($cookies, $firebaseAuth, $firebaseArray, fbRootUrl) {
 
     var factoryAPI = {
       createClient: createClient
@@ -15,9 +15,17 @@
     ////////////////
 
     function createClient(dataFromForm) {
+
+      //let;s make firebase happy, no special characters in keys:
+      delete dataFromForm.invoiceOccurrence.$id;
+      delete dataFromForm.invoiceOccurrence.$priority;
+      delete dataFromForm.jobType.$id;
+      delete dataFromForm.jobType.$priority;
+      delete dataFromForm.state.$id;
+      delete dataFromForm.state.$priority
+
       var rootRef = new Firebase(fbRootUrl);
-      // var authorize = authStore.fetchloginCache();
-      var authorize = authStore.fetchAuthCookie();
+      var userToken = $cookies.get('ATOK');
       var clientID = moment().unix();
       var creationMoment = {
         creationMoment: clientID
@@ -25,10 +33,7 @@
       var completeData = {};
       completeData = angular.extend(completeData, dataFromForm, creationMoment);
 
-      return $firebaseAuth(rootRef).$authWithPassword({
-        email: authorize.email,
-        password: authorize.password
-      })
+      return $firebaseAuth(rootRef).$authWithCustomToken(userToken)
 
         .then(function (authData) {
           rootRef.child('userClients').child(authData.uid).child('client' + ':' + clientID).set(completeData);

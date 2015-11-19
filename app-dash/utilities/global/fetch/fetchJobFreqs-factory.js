@@ -5,7 +5,7 @@
     .module('nickoDash.utils')
     .factory('fetchJobFreqs', fetchJobFreqs);
 
-  function fetchJobFreqs($firebaseAuth, $firebaseArray, fbRootUrl, authStore) {
+  function fetchJobFreqs($firebaseArray, fbRootUrl) {
 
     var factoryAPI = {
         frequencyList: frequencyList

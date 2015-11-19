@@ -5,7 +5,7 @@
     .module('nickoDash.utils')
     .factory('clientsList', clientsList);
 
-  function clientsList($firebaseAuth, $firebaseArray, fbRootUrl, authStore) {
+  function clientsList($cookies, $firebaseAuth, $firebaseArray, fbRootUrl) {
 
     var factoryAPI = {
         fetchClients: fetchClients
@@ -15,7 +15,7 @@
     ////////////////
 
     function fetchClients() {
-      var user = authStore.fetchIDCookie();
+      var user = $cookies.get('AUID');
       var clientsRef = new Firebase(fbRootUrl + '/userClients' + '/' + user);
       var clientsArray = $firebaseArray(clientsRef);
 

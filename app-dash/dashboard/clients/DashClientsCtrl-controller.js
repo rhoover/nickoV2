@@ -5,7 +5,7 @@
     .module('nickoDash.dash')
     .controller('DashClientsCtrl', DashClientsCtrl);
 
-  function DashClientsCtrl($scope, $location, $window, dashDataSortFilter, clientsList, fetchInvoiceOptions, fetchStates, fetchJobFreqs, clientsAdd) {
+  function DashClientsCtrl($scope, $location, $window,  dashDataSortFilter, clientsList, fetchInvoiceOptions, fetchStates, fetchJobFreqs, clientsAdd) {
     /*jshint validthis: true */
     var dashClients = this;
     dashClients.toggle = {switch: true};
@@ -20,6 +20,18 @@
 
     ////////////////
 
+    // function testSubmission() {
+    //   var rootRef = new Firebase(fbRootUrl);
+    //   var userID = $cookies.get('AUID');
+    //   var userToken = $cookies.get('ATOK');
+    //   return $firebaseAuth(rootRef).$authWithCustomToken(userToken)
+    //     .then(function(authData) {
+    //       console.log('Logged In As: ', authData);
+    //     })
+    //     .catch(function(error) {
+    //       console.log('FAIL: ', error);
+    //     })
+    // }
     function refreshKey() {
       var dashView = $location.path();
       if (dashView = '/dashboard/clients') {
@@ -78,9 +90,8 @@
               clientsList.fetchClients()
                 .then(function (clientsListData) {
                   var sortedDsc = dashDataSortFilter.sortDsc(clientsListData);
-                  // dashClients.clients = clientsListData;
                   dashClients.clients = sortedDsc;
-                  $scope.switch = switchData;
+                  innerViewToggle();
                 });
             });
           });

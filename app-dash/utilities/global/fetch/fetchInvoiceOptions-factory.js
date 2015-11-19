@@ -5,7 +5,7 @@
     .module('nickoDash.utils')
     .factory('fetchInvoiceOptions', fetchInvoiceOptions);
 
-  function fetchInvoiceOptions($firebaseAuth, $firebaseArray, fbRootUrl) {
+  function fetchInvoiceOptions($firebaseArray, fbRootUrl) {
 
     var factoryAPI = {
         invoicesList: invoicesList

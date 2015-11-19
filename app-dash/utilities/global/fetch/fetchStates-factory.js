@@ -5,7 +5,7 @@
         .module('nickoDash.utils')
         .factory('fetchStates', fetchStates);
 
-    function fetchStates($firebaseAuth, $firebaseArray, fbRootUrl, authStore) {
+    function fetchStates($firebaseArray, fbRootUrl) {
 
         var factoryAPI = {
             unitedStates: unitedStates
