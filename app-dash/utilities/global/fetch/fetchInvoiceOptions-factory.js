@@ -27,7 +27,7 @@
           // };
 
           var pickMeInvoice = {
-            name: ' Pick an Invoicing Frequency',
+            name: ' Pick An Invoicing Frequency',
             id: 'pickme'
           }
 

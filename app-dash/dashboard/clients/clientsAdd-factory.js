@@ -19,6 +19,8 @@
       //let;s make firebase happy, no special characters in keys:
       delete dataFromForm.invoiceOccurrence.$id;
       delete dataFromForm.invoiceOccurrence.$priority;
+      delete dataFromForm.jobFreq.$id;
+      delete dataFromForm.jobFreq.$priority;
       delete dataFromForm.jobType.$id;
       delete dataFromForm.jobType.$priority;
       delete dataFromForm.state.$id;
@@ -42,18 +44,22 @@
 
         .then(function (userUID) {
           var occID = completeData.invoiceOccurrence.id;
+          var freqID = completeData.jobFreq.id;
           var typeID = completeData.jobType.id;
 
           var clientProp = 'client' + ':' + clientID.toString();
 
           var clientSet = {};
-          var jobSet = {};
+          var jobFreqSet = {};
+          var jobTypeSet = {};
 
           clientSet[clientProp] = true;
-          jobSet[clientProp] = true;
+          jobFreqSet[clientProp] = true;
+          jobTypeSet[clientProp] = true;
 
           rootRef.child('userInvoiceOccurrence').child(occID).child(userUID).update(clientSet);
-          rootRef.child('userJobType').child(typeID).child(userUID).update(jobSet);
+          rootRef.child('userJobOccurrence').child(freqID).child(userUID).update(jobFreqSet);
+          rootRef.child('userJobType').child(typeID).child(userUID).update(jobTypeSet);
 
           return 'data';
         })

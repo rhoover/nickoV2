@@ -215,6 +215,7 @@ function nicko_dash_scripts() {
     wp_enqueue_script('nickoDashFetchClients', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchClients-factory.js', array(), null, true);
     wp_enqueue_script('nickoDashFetchInvoiceOptions', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchInvoiceOptions-factory.js', array(), null, true);
     wp_enqueue_script('nickoDashFetchJobFreqs', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchJobFreqs-factory.js', array(), null, true);
+    wp_enqueue_script('nickoDashFetchJobTypes', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchJobTypes-factory.js', array(), null, true);
     wp_enqueue_script('nickoDashFetchStates', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchStates-factory.js', array(), null, true);
     wp_enqueue_script('nickoDashFirebaseURL', get_template_directory_uri() . '/app-dash/utilities/firebase/root-url-constant.js', array(), null, true);
     wp_enqueue_script('nickoDashCrewStore', get_template_directory_uri() . '/app-dash/utilities/stores/crewLeaderStore-factory.js', array(), null, true);

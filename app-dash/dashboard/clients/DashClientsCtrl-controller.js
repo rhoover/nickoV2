@@ -5,7 +5,7 @@
     .module('nickoDash.dash')
     .controller('DashClientsCtrl', DashClientsCtrl);
 
-  function DashClientsCtrl($scope, $location, $window,  dashDataSortFilter, clientsList, fetchInvoiceOptions, fetchStates, fetchJobFreqs, clientsAdd) {
+  function DashClientsCtrl($scope, $location, $window,  dashDataSortFilter, clientsList, fetchInvoiceOptions, fetchStates, fetchJobFreqs, fetchJobTypes, clientsAdd) {
     /*jshint validthis: true */
     var dashClients = this;
     dashClients.toggle = {switch: true};
@@ -16,22 +16,11 @@
     invoiceOccurrence();
     statesList();
     jobFrequency();
+    jobType();
     createClient();
 
     ////////////////
 
-    // function testSubmission() {
-    //   var rootRef = new Firebase(fbRootUrl);
-    //   var userID = $cookies.get('AUID');
-    //   var userToken = $cookies.get('ATOK');
-    //   return $firebaseAuth(rootRef).$authWithCustomToken(userToken)
-    //     .then(function(authData) {
-    //       console.log('Logged In As: ', authData);
-    //     })
-    //     .catch(function(error) {
-    //       console.log('FAIL: ', error);
-    //     })
-    // }
     function refreshKey() {
       var dashView = $location.path();
       if (dashView = '/dashboard/clients') {
@@ -74,12 +63,20 @@
         });
     }
 
-    function jobFrequency() {
-      fetchJobFreqs.frequencyList()
+    function jobType() {
+      fetchJobTypes.typeList()
         .then(function (jobTypes) {
           dashClients.jobTypes = jobTypes;
         });
     }
+
+    function jobFrequency() {
+      fetchJobFreqs.frequencyList()
+        .then(function (jobFreqs) {
+          dashClients.jobFreqs = jobFreqs;
+        });
+    }
+
     function createClient() {
 
       dashClients.createNewCustomer = function (dataFromForm) {

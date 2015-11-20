@@ -145,7 +145,7 @@
         </fieldset>
 
         <!-- Email -->
-        <fieldset class="clients-form-field">
+        <fieldset class="clients-form-field-small">
           <input type="email" name="email" data-ng-model="dashClients.newcustomer.email" data-prevent-enter data-ng-keyup="cancel($event)" data-input-field-display data-ng-minlength="2" data-ng-maxlength="75" class="clients-form-input">
           <label for="email" class="clients-form-label">
             <span class="clients-form-label-text">Contact Email</span>
@@ -154,6 +154,15 @@
             <ng-message when="minlength" class="clients-form-messages-messages-generic">Too short, this needs to be at least two(2) characters long.</ng-message>
             <ng-message when="maxlength" class="clients-form-messages-messages-generic">Too long, this needs to be less than fifty(50) characters long.</ng-message>
             <p data-ng-class="{ 'clients-form-messages-valid':dashClients.newCustomer.email.$dirty}" class="clients-form-messages-hide-valid">Cool, looks good!</p>
+          </ng-messages>
+        </fieldset>
+
+        <!-- Job Type -->
+        <fieldset class="clients-form-field-small">
+          <select name="jobType" data-ng-model="dashClients.newcustomer.jobType" data-ng-keyup="cancel($event)" data-ng-options="jobType.type for jobType in dashClients.jobTypes track by jobType.$id" class="clients-form-select">
+          </select>
+          <ng-messages for="dashClients.newCustomer.jobType.$error" class="clients-form-messages">
+            <p data-ng-class="{ 'clients-form-messages-valid':dashClients.newCustomer.jobType.$dirty}" class="clients-form-messages-hide-valid">Cool, looks good!</p>
           </ng-messages>
         </fieldset>
 
@@ -166,15 +175,14 @@
           </ng-messages>
         </fieldset>
 
-        <!-- Job Type -->
+        <!-- Job Frequency -->
         <fieldset class="clients-form-field-small">
-          <select name="jobType" data-ng-model="dashClients.newcustomer.jobType" data-ng-keyup="cancel($event)" data-ng-options="jobType.name for jobType in dashClients.jobTypes track by jobType.$id" class="clients-form-select">
+          <select name="jobFreq" data-ng-model="dashClients.newcustomer.jobFreq" data-ng-keyup="cancel($event)" data-ng-options="jobFreq.name for jobFreq in dashClients.jobFreqs track by jobFreq.$id" class="clients-form-select">
           </select>
-          <ng-messages for="dashClients.newCustomer.jobType.$error" class="clients-form-messages">
-            <p data-ng-class="{ 'clients-form-messages-valid':dashClients.newCustomer.jobType.$dirty}" class="clients-form-messages-hide-valid">Cool, looks good!</p>
+          <ng-messages for="dashClients.newCustomer.jobFreq.$error" class="clients-form-messages">
+            <p data-ng-class="{ 'clients-form-messages-valid':dashClients.newCustomer.jobFreq.$dirty}" class="clients-form-messages-hide-valid">Cool, looks good!</p>
           </ng-messages>
         </fieldset>
-
 
         <!-- Note -->
         <fieldset class="clients-form-field">
