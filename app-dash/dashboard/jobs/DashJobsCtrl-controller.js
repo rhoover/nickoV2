@@ -1,19 +1,23 @@
 (function () {
-    'use strict';
+  'use strict';
 
-    angular
-        .module('nickoDash.dash')
-        .controller('DashJobsCtrl', DashJobsCtrl);
+  angular
+    .module('nickoDash.dash')
+    .controller('DashJobsCtrl', DashJobsCtrl);
 
-    function DashJobsCtrl() {
-        /*jshint validthis: true */
-        var dashJobs = this;
+  function DashJobsCtrl($scope, $location, $window) {
+    /*jshint validthis: true */
+    var dashJobs = this;
+    dashJobs.toggle = {switch: true};
 
-        goForthAndBind();
+    innerViewToggle();
 
-        ////////////////
+    ////////////////
 
-        function goForthAndBind() {
-        }
+    function innerViewToggle() {
+      $scope.switchSubView = function () {
+        dashJobs.toggle.switch = !dashJobs.toggle.switch;
+      }
     }
+  }
 })();

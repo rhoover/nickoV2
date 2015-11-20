@@ -38,8 +38,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   src: url('fonts/Roboto-Bold.eot?312782400');
   src: url('fonts/Roboto-Bold.eot?&312782400#iefix') format('embedded-opentype'), url('fonts/Roboto-Bold.woff?312782400') format('woff'), url('fonts/Roboto-Bold.ttf?312782400') format('truetype'), url('fonts/Roboto-Bold.svg?312782400') format('svg');
 }
-.icons-sprite, .icons-accounts-small, .icons-accounts, .dash-nav-item-invoice, .icons-add-small, .settings-hero-add:before, .icons-add, .icons-clients-small, .icons-clients, .dash-nav-item-clients, .icons-delete-small, .settings-hero-delete:before, .clients-data-content-item-action-delete > p:before, .jobs-data-content-item-action-delete > p:before, .icons-delete, .icons-edit-small, .settings-hero-edit:before, .clients-data-content-item-action-edit > p:before, .jobs-data-content-item-action-edit > p:before, .icons-edit, .icons-hassle, .home-branding-what-hassle:before, .icons-help-small, .icons-help, .dash-nav-item-help, .icons-home-small, .icons-home, .dash-nav-item-home, .icons-jobs-small, .icons-jobs, .dash-nav-item-jobs, .icons-logo, .icons-scrollup, .icons-search-small, .icons-search, .icons-settings-small, .icons-settings, .dash-nav-item-settings, .icons-solve, .home-branding-what-solve:before, .icons-trash-small, .icons-trash, .icons-who, .home-branding-what-who:before {
-  background-image: url('images/icons-s2382852bef.png');
+.icons-sprite, .icons-accounts-small, .icons-accounts, .dash-nav-item-invoice, .icons-add-small, .settings-hero-add:before, .icons-add, .icons-clients-small, .icons-clients, .dash-nav-item-clients, .icons-delete-small, .settings-hero-delete:before, .clients-data-content-item-action-delete > p:before, .jobs-data-content-item-action-delete > p:before, .icons-delete, .icons-edit-small, .settings-hero-edit:before, .clients-data-content-item-action-edit > p:before, .jobs-data-content-item-action-edit > p:before, .icons-edit, .icons-hassle, .home-branding-what-hassle:before, .icons-help-small, .icons-help, .dash-nav-item-help, .icons-home-small, .icons-home, .dash-nav-item-home, .icons-jobs-small, .icons-jobs, .dash-nav-item-jobs, .icons-scrollup, .icons-search-small, .icons-search, .icons-settings-small, .icons-settings, .dash-nav-item-settings, .icons-solve, .home-branding-what-solve:before, .icons-trash-small, .icons-trash, .icons-who, .home-branding-what-who:before {
+  background-image: url('images/icons-sf19cfd757c.png');
   background-repeat: no-repeat;
 }
 
@@ -111,44 +111,40 @@ Use it to make something cool, have fun, and share what you've learned with othe
   background-position: 0 -390px;
 }
 
-.icons-logo {
+.icons-scrollup {
   background-position: 0 -420px;
 }
 
-.icons-scrollup {
-  background-position: 0 -520px;
-}
-
 .icons-search-small {
-  background-position: 0 -550px;
+  background-position: 0 -450px;
 }
 
 .icons-search {
-  background-position: 0 -565px;
+  background-position: 0 -465px;
 }
 
 .icons-settings-small {
-  background-position: 0 -595px;
+  background-position: 0 -495px;
 }
 
 .icons-settings, .dash-nav-item-settings {
-  background-position: 0 -610px;
+  background-position: 0 -510px;
 }
 
 .icons-solve, .home-branding-what-solve:before {
-  background-position: 0 -640px;
+  background-position: 0 -540px;
 }
 
 .icons-trash-small {
-  background-position: 0 -700px;
+  background-position: 0 -600px;
 }
 
 .icons-trash {
-  background-position: 0 -715px;
+  background-position: 0 -615px;
 }
 
 .icons-who, .home-branding-what-who:before {
-  background-position: 0 -745px;
+  background-position: 0 -645px;
 }
 
 html {
@@ -978,6 +974,65 @@ html {
   height: 0px;
 }
 
+.jobs-data-animate {
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.75s;
+  -o-transition-duration: 0.75s;
+  -webkit-transition-duration: 0.75s;
+  transition-duration: 0.75s;
+}
+
+.jobs-data-animate.ng-enter {
+  -moz-transition-delay: 0.75s;
+  -o-transition-delay: 0.75s;
+  -webkit-transition-delay: 0.75s;
+  transition-delay: 0.75s;
+  -moz-transform: translate3d(-125%, 0, 0);
+  -webkit-transform: translate3d(-125%, 0, 0);
+  transform: translate3d(-125%, 0, 0);
+  height: 0px;
+}
+
+.jobs-data-animate.ng-enter.ng-enter-active {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  height: 100%;
+}
+
+.jobs-data-animate.ng-leave {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  height: 100%;
+}
+
+.jobs-data-animate.ng-leave.ng-leave-active {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(-125%, 0, 0);
+  -webkit-transform: translate3d(-125%, 0, 0);
+  transform: translate3d(-125%, 0, 0);
+  height: 0px;
+}
+
 .details-animate {
   -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -1778,7 +1833,6 @@ html {
 }
 
 .jobs-data-header {
-  margin-top: 0px;
   border-bottom: 1px solid rgba(112, 142, 78, 0.35);
 }
 .jobs-data-action-search {

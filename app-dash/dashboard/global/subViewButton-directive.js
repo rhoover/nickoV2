@@ -3,9 +3,9 @@
 
   angular
     .module('nickoDash.dash')
-    .directive('clientsButton', clientsButton);
+    .directive('viewButton', viewButton);
 
-  function clientsButton () {
+  function viewButton () {
 
     var ddo = {
       link: link,

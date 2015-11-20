@@ -1,8 +1,8 @@
 <script type="text/ng-template" id="clients.html">
 
-  <section data-clients-button class="clients-action">
-    <p data-clients="addClient" class="clients-action-add">Create A New Client</p>
-    <p data-clients="viewList" class="clients-action-view">View Client List</p>
+  <section data-view-button class="clients-action">
+    <p class="clients-action-add">Create A New Client</p>
+    <p class="clients-action-view">View Client List</p>
   </section>
 
   <!-- Clients List -->

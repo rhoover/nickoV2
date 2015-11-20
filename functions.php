@@ -225,12 +225,12 @@ function nicko_dash_scripts() {
 
     wp_enqueue_script('nickoDashUCM', get_template_directory_uri() . '/app-dash/dashboard/global/userCompanyMeta-factory.js', array(), null, true);
     wp_enqueue_script('nickoCompanyHeader', get_template_directory_uri() . '/app-dash/dashboard/global/companyNameHeader-directive.js', array(), null, true);
+    wp_enqueue_script('nickoDashViewBtn', get_template_directory_uri() . '/app-dash/dashboard/global/subViewButton-directive.js', array(), null, true);
 
     wp_enqueue_script('nickoDashMenuNav', get_template_directory_uri() . '/app-dash/dashboard/menu/menuNavButton-directive.js', array(), null, true);
     wp_enqueue_script('nickoDashHomeCtrl', get_template_directory_uri() . '/app-dash/dashboard/home/DashHomeCtrl-controller.js', array(), null, true);
 
     wp_enqueue_script('nickoDashClientsCtrl', get_template_directory_uri() . '/app-dash/dashboard/clients/DashClientsCtrl-controller.js', array(), null, true);
-    wp_enqueue_script('nickoDashClientsBtn', get_template_directory_uri() . '/app-dash/dashboard/clients/clientsButton-directive.js', array(), null, true);
     wp_enqueue_script('nickoDashAddClient', get_template_directory_uri() . '/app-dash/dashboard/clients/clientsAdd-factory.js', array(), null, true);
 
     wp_enqueue_script('nickoDashJobsCtrl', get_template_directory_uri() . '/app-dash/dashboard/jobs/DashJobsCtrl-controller.js', array(), null, true);
