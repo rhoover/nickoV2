@@ -1888,6 +1888,13 @@ html {
 .jobs-data-content-item-sub-frequency:before {
   content: "Job Frequency";
 }
+.jobs-data-content-item-action-edit {
+  background-color: rgba(160, 186, 130, 0.05);
+  border: 0.2em solid rgba(160, 186, 130, 0.45);
+}
+.jobs-data-content-item-action-edit:after {
+  background-color: rgba(112, 142, 78, 0.1);
+}
 .jobs-data-content-item-action-edit > p:before {
   content: "";
   float: left;
@@ -1897,7 +1904,12 @@ html {
   opacity: .5;
 }
 .jobs-data-content-item-action-delete {
+  background-color: rgba(233, 151, 149, 0.05);
+  border: 0.2em solid rgba(233, 151, 149, 0.45);
   float: right;
+}
+.jobs-data-content-item-action-delete:after {
+  background-color: rgba(222, 100, 97, 0.1);
 }
 .jobs-data-content-item-action-delete > p:before {
   content: "";
