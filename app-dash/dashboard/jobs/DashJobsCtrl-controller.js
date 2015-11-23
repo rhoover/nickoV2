@@ -5,7 +5,7 @@
     .module('nickoDash.dash')
     .controller('DashJobsCtrl', DashJobsCtrl);
 
-  function DashJobsCtrl($scope, $location, $window, dashDataSortFilter, jobsList, fetchStates, fetchServices) { //fetchServices fetchJobFreqs clientsList jobsAdd
+  function DashJobsCtrl($scope, $location, $window, dashDataSortFilter, fetchJobs, fetchStates, fetchServices) { // fetchJobFreqs clientsList jobsAdd
     /*jshint validthis: true */
     var dashJobs = this;
     dashJobs.toggle = {switch: true};
@@ -27,7 +27,7 @@
     }
 
     function jobList() {
-      jobsList.fetchJobs()
+      fetchJobs.jobsList()
         .then(function (jobsListData) {
           var sortedDsc = dashDataSortFilter.sortDsc(jobsListData);
           dashJobs.jobs = sortedDsc;

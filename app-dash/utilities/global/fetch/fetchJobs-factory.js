@@ -3,18 +3,18 @@
 
   angular
     .module('nickoDash.utils')
-    .factory('jobsList', jobsList);
+    .factory('fetchJobs', fetchJobs);
 
-  function jobsList($cookies, $firebaseAuth, $firebaseArray, fbRootUrl) {
+  function fetchJobs($cookies, $firebaseAuth, $firebaseArray, fbRootUrl) {
 
     var factoryAPI = {
-      fetchJobs: fetchJobs
+      jobsList: jobsList
     };
     return factoryAPI;
 
     ////////////////
 
-    function fetchJobs() {
+    function jobsList() {
       var user = $cookies.get('AUID');
       var jobsRef = new Firebase(fbRootUrl + '/userJobs' + '/' + user);
       var jobsArray = $firebaseArray(jobsRef);
