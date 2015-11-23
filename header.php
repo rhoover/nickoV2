@@ -94,6 +94,8 @@
             echo "data-ng-controller=\"LoginCtrl as login\"  ";
         } elseif (is_page('Details')) {
             echo "data-ng-controller=\"DetailsCtrl as details\"  ";
+        } elseif (is_page('Dashboard')) {
+            echo "data-ng-controller=\"DashCtrl as dash\"  ";
         }
 
 

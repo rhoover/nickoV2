@@ -212,12 +212,16 @@ function nicko_dash_scripts() {
     wp_enqueue_script('nickoDashPreventEnter', get_template_directory_uri() . '/app-dash/utilities/global/preventEnter-directive.js', array(), null, true);
     wp_enqueue_script('nickoDashButtonClick', get_template_directory_uri() . '/app-dash/utilities/global/buttonClick-directive.js', array(), null, true);
     wp_enqueue_script('nickoDashDataSort', get_template_directory_uri() . '/app-dash/utilities/global/dashDataSort-filter.js', array(), null, true);
+    wp_enqueue_script('nickoDashCtrl', get_template_directory_uri() . '/app-dash/utilities/global/DashCtrl-controller.js', array(), null, true);
+
     wp_enqueue_script('nickoDashFetchClients', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchClients-factory.js', array(), null, true);
     wp_enqueue_script('nickoDashFetchInvoiceOptions', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchInvoiceOptions-factory.js', array(), null, true);
     wp_enqueue_script('nickoDashFetchJobFreqs', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchJobFreqs-factory.js', array(), null, true);
     wp_enqueue_script('nickoDashFetchJobTypes', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchJobTypes-factory.js', array(), null, true);
     wp_enqueue_script('nickoDashFetchStates', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchStates-factory.js', array(), null, true);
     wp_enqueue_script('nickoDashFetchJobs', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchJobs-factory.js', array(), null, true);
+    wp_enqueue_script('nickoDashFetchServices', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchServices-factory.js', array(), null, true);
+
     wp_enqueue_script('nickoDashFirebaseURL', get_template_directory_uri() . '/app-dash/utilities/firebase/root-url-constant.js', array(), null, true);
     wp_enqueue_script('nickoDashCrewStore', get_template_directory_uri() . '/app-dash/utilities/stores/crewLeaderStore-factory.js', array(), null, true);
 

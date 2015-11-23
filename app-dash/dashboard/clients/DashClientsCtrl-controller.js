@@ -10,7 +10,7 @@
     var dashClients = this;
     dashClients.toggle = {switch: true};
 
-    refreshKey();
+    // refreshKey();
     clientList();
     innerViewToggle();
     invoiceOccurrence();
@@ -21,18 +21,24 @@
 
     ////////////////
 
-    function refreshKey() {
-      var dashView = $location.path();
-      if (dashView = '/dashboard/clients') {
-        angular.element($window).bind('keydown keyup', function (event) {
-          if (event.which === 116 || event.keyCode === 116) {
-            $scope.$apply(function () {
-              // event.preventDefault();
-              $location.path('/dashboard/');
-            });
-          }
-        });
-      };
+    // function refreshKey() {
+    //   var dashView = $location.path();
+    //   if (dashView = '/dashboard/clients') {
+    //     angular.element($window).bind('keydown keyup', function (event) {
+    //       if (event.which === 116 || event.keyCode === 116) {
+    //         $scope.$apply(function () {
+    //           // event.preventDefault();
+    //           $location.path('/dashboard/');
+    //         });
+    //       }
+    //     });
+    //   };
+    // }
+
+    function innerViewToggle() {
+      $scope.switchSubView = function () {
+        dashClients.toggle.switch = !dashClients.toggle.switch;
+      }
     }
 
     function clientList() {
@@ -42,12 +48,6 @@
           dashClients.clients = sortedDsc;
         });
       }
-
-    function innerViewToggle() {
-      $scope.switchSubView = function () {
-        dashClients.toggle.switch = !dashClients.toggle.switch;
-      }
-    }
 
     function statesList() {
       fetchStates.unitedStates()
@@ -88,7 +88,9 @@
                 .then(function (clientsListData) {
                   var sortedDsc = dashDataSortFilter.sortDsc(clientsListData);
                   dashClients.clients = sortedDsc;
-                  innerViewToggle();
+                  $scope.switchSubView = function () {
+                    dashClients.toggle.switch = !dashClients.toggle.switch;
+                  }
                 });
             });
           });

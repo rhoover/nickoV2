@@ -20,6 +20,6 @@
 
 <h2 data-company-name-header class="dash-header"></h2>
 
-<section data-ng-view="" class="dash dash-animate"></section>
+<section data-no-eff-five data-ng-view="" class="dash dash-animate"></section>
 
 <?php get_footer(); ?>

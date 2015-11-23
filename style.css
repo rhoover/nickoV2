@@ -857,25 +857,25 @@ html {
 }
 
 .dash-animate {
-  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
   -moz-transition-duration: 0.75s;
   -o-transition-duration: 0.75s;
   -webkit-transition-duration: 0.75s;
   transition-duration: 0.75s;
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .dash-animate.ng-enter {
-  -moz-transition-delay: 0.75s;
-  -o-transition-delay: 0.75s;
-  -webkit-transition-delay: 0.75s;
-  transition-delay: 0.75s;
+  -moz-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
   -moz-transform: translate3d(-125%, 0, 0);
   -webkit-transform: translate3d(-125%, 0, 0);
   transform: translate3d(-125%, 0, 0);
@@ -883,21 +883,12 @@ html {
 }
 
 .dash-animate.ng-enter.ng-enter-active {
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
   -moz-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  height: 100%;
 }
 
 .dash-animate.ng-leave {
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
   -moz-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -905,10 +896,6 @@ html {
 }
 
 .dash-animate.ng-leave.ng-leave-active {
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
   -moz-transform: translate3d(-125%, 0, 0);
   -webkit-transform: translate3d(-125%, 0, 0);
   transform: translate3d(-125%, 0, 0);
@@ -1174,6 +1161,7 @@ html {
 .main {
   width: 100%;
   float: left;
+  min-height: 100%;
 }
 
 .footer {
