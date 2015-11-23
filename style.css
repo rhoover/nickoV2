@@ -918,10 +918,10 @@ html {
 }
 
 .clients-data-animate.ng-enter {
-  -moz-transition-delay: 0.75s;
-  -o-transition-delay: 0.75s;
-  -webkit-transition-delay: 0.75s;
-  transition-delay: 0.75s;
+  -moz-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
   -moz-transform: translate3d(-125%, 0, 0);
   -webkit-transform: translate3d(-125%, 0, 0);
   transform: translate3d(-125%, 0, 0);
@@ -977,10 +977,10 @@ html {
 }
 
 .jobs-data-animate.ng-enter {
-  -moz-transition-delay: 0.75s;
-  -o-transition-delay: 0.75s;
-  -webkit-transition-delay: 0.75s;
-  transition-delay: 0.75s;
+  -moz-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
   -moz-transform: translate3d(-125%, 0, 0);
   -webkit-transform: translate3d(-125%, 0, 0);
   transform: translate3d(-125%, 0, 0);

@@ -4,7 +4,7 @@
   @include transition-duration(.75s);
 }
 .jobs-data-animate.ng-enter {
-  @include transition-delay(.75s);
+  @include transition-delay(.25s);
   @include translate3d(-125%, 0, 0);
   height: 0px;
 }
