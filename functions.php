@@ -118,12 +118,7 @@ add_filter('the_generator', 'rah_remove_version');
 /**
 * Enqueue scripts and styles.
 */
-function nicko_styles() {
-  wp_enqueue_style( 'nicko-style', get_stylesheet_uri(), false, null, 'screen, projection'  );
-  $style_in_head_element = '.body{margin:0px;}.header{position:fixed;width:100%;z-index:50;padding-top:.5em;padding-bottom:.5em;background-color:transparent;background-image:-moz-linear-gradient(#708e4e,rgba(122,155,85,0.35));background-image:-webkit-linear-gradient(#708e4e,rgba(122,155,85,0.35));background-image:linear-gradient(#708e4e,rgba(122,155,85,0.35));border-bottom:0.1em solid rgba(63,80,44,0.15);-moz-box-shadow:0px 1px 5px 3px rgba(112,142,78,0.15);-webkit-box-shadow:0px 1px 5px 3px rgba(112,142,78,0.15);box-shadow:0px 1px 5px 3px rgba(112,142,78,0.15);}@media(min-width:60em){.header-text{padding-left:3.1328320802%;}}.header-text{font-family: Roboto-Bold,Helvetica,Arial, sans-serif;text-decoration:none;font-size:2.5em;line-height:1.5231428571em;padding-left:16.2656641604%;color:whitesmoke;text-shadow:rgba(63,80,44,0.4)1px 1px 0px;}.header-logo{display:block;position:fixed;overflow:visible;margin-left:8.2656641604%}';
-  wp_add_inline_style('nicko-style', $style_in_head_element);
-}
-add_action('wp_enqueue_scripts', 'nicko_styles');
+wp_enqueue_style( 'nicko-style', get_stylesheet_uri(), false, null, 'screen, projection'  );
 
 $localConfig = $_SERVER['DOCUMENT_ROOT'] . '/production-checklist.txt';
 if (file_exists($localConfig)) {

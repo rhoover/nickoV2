@@ -10,7 +10,7 @@
     <h2 class="clients-data-header">Client List</h2>
     <div class="clients-data-action">
       <div class="clients-data-action-search">
-        <input type="search" name="clientsearch" class="clients-data-action-search-box" data-ng-model="search.$">
+        <input type="search" name="clientsearch" class="clients-data-action-search-box" data-ng-model="search.$" data-ng-model-options="{'updateOn':'blur default','debounce':{'blur':0,'default':250}}">
         <label for="clientsearch" class="clients-data-action-search-label">
           <span class="clients-data-action-search-label-text">Search or Filter</span>
         </label>
