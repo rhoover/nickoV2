@@ -33,6 +33,7 @@
         creationMoment: clientID
       };
       var completeData = {};
+
       completeData = angular.extend(completeData, dataFromForm, creationMoment);
 
       return $firebaseAuth(rootRef).$authWithCustomToken(userToken)
