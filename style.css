@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Welcome To Compass
 Theme Name: nicko
@@ -184,7 +185,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.clients-action-add:after, .jobs-action-add:after, .invoice-action-add:after, .clients-action-active:after, .jobs-action-add-active:after, .invoice-action-add-active:after, .clients-action-view:after, .jobs-action-view:after, .invoice-action-view:after, .clients-action-view-active:after, .jobs-action-view-active:after, .invoice-action-view-active:after, .settings-hero-edit:after, .settings-hero-add:after, .settings-hero-delete:after, .clients-data-content-item-action-edit:after, .clients-data-content-item-action-delete:after, .jobs-data-content-item-action-edit:after, .jobs-data-content-item-action-delete:after, .signup-submit:after, .login-submit:after, .clients-form-submit:after, .jobs-form-submit:after, .home-convert-item:after, .signup-services-select:after, .signup-services-button:after, .signup-select:after, .dash-nav-item:after, .settings-hero-content-save:after, .invoice-form-item:after, .multiSelect > button:hover:after, .clients-action-active, .jobs-action-add-active, .invoice-action-add-active, .clients-action-view, .jobs-action-view, .invoice-action-view, .clients-action-view-active, .jobs-action-view-active, .invoice-action-view-active, .signup-input, .login-input, .clients-data-action-search-box, .clients-form-input, .jobs-data-action-search-box, .jobs-form-input, .signup-label, .login-label, .clients-data-action-search-label, .clients-form-label, .jobs-data-action-search-label, .jobs-form-label, .signup-label.filled, .login-label.filled, .clients-data-action-search-label.filled, .clients-form-label.filled, .jobs-data-action-search-label.filled, .jobs-form-label.filled, .signup-submit, .login-submit, .clients-form-submit, .jobs-form-submit, .signup-input:focus ~ .signup-label, .login-input:focus ~ .login-label, .clients-data-action-search-box:focus ~ .clients-data-action-search-label, .clients-form-input:focus ~ .clients-form-label, .jobs-data-action-search-box:focus ~ .jobs-data-action-search-label, .jobs-form-input:focus ~ .jobs-form-label {
+.clients-action-add:after, .jobs-action-add:after, .invoice-action-add:after, .clients-action-active:after, .jobs-action-add-active:after, .invoice-action-add-active:after, .clients-action-view:after, .jobs-action-view:after, .invoice-action-view:after, .clients-action-view-active:after, .jobs-action-view-active:after, .invoice-action-view-active:after, .settings-hero-edit:after, .settings-hero-add:after, .settings-hero-delete:after, .clients-data-content-item-action-edit:after, .clients-data-content-item-action-delete:after, .jobs-data-content-item-action-edit:after, .jobs-data-content-item-action-delete:after, .signup-submit:after, .login-submit:after, .clients-form-submit:after, .jobs-form-submit:after, .home-convert-item:after, .signup-services-select:after, .signup-services-button:after, .signup-select:after, .dash-nav-item:after, .settings-hero-content-save:after, .invoice-form-item:after, .clients-action-active, .jobs-action-add-active, .invoice-action-add-active, .clients-action-view, .jobs-action-view, .invoice-action-view, .clients-action-view-active, .jobs-action-view-active, .invoice-action-view-active, .signup-input, .login-input, .clients-data-action-search-box, .clients-form-input, .jobs-data-action-search-box, .jobs-form-input, .signup-label, .login-label, .clients-data-action-search-label, .clients-form-label, .jobs-data-action-search-label, .jobs-form-label, .signup-label.filled, .login-label.filled, .clients-data-action-search-label.filled, .clients-form-label.filled, .jobs-data-action-search-label.filled, .jobs-form-label.filled, .signup-submit, .login-submit, .clients-form-submit, .jobs-form-submit, .signup-input:focus ~ .signup-label, .login-input:focus ~ .login-label, .clients-data-action-search-box:focus ~ .clients-data-action-search-label, .clients-form-input:focus ~ .clients-form-label, .jobs-data-action-search-box:focus ~ .jobs-data-action-search-label, .jobs-form-input:focus ~ .jobs-form-label {
   -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -218,13 +219,13 @@ html {
   cursor: pointer;
 }
 
-.clients-action-add, .jobs-action-add, .invoice-action-add, .clients-action-active, .jobs-action-add-active, .invoice-action-add-active, .clients-action-view, .jobs-action-view, .invoice-action-view, .clients-action-view-active, .jobs-action-view-active, .invoice-action-view-active, .clients-data-content-item, .jobs-data-content-item, .signup-submit, .login-submit, .clients-form-submit, .jobs-form-submit, .home-convert-item, .signup-services-button, .signup-select, .settings-hero-content-save, .clients-form-select, .jobs-form-select, .invoice-form-select, .multiSelect > button {
+.clients-action-add, .jobs-action-add, .invoice-action-add, .clients-action-active, .jobs-action-add-active, .invoice-action-add-active, .clients-action-view, .jobs-action-view, .invoice-action-view, .clients-action-view-active, .jobs-action-view-active, .invoice-action-view-active, .clients-data-content-item, .jobs-data-content-item, .signup-submit, .login-submit, .clients-form-submit, .jobs-form-submit, .home-convert-item, .signup-services-button, .signup-select, .settings-hero-content-save, .clients-form-select, .jobs-form-select, .invoice-form-select {
   -moz-box-shadow: 2px 2px 4px 0px rgba(27, 87, 90, 0.17);
   -webkit-box-shadow: 2px 2px 4px 0px rgba(27, 87, 90, 0.17);
   box-shadow: 2px 2px 4px 0px rgba(27, 87, 90, 0.17);
 }
 
-.clients-action-add:after, .jobs-action-add:after, .invoice-action-add:after, .clients-action-active:after, .jobs-action-add-active:after, .invoice-action-add-active:after, .clients-action-view:after, .jobs-action-view:after, .invoice-action-view:after, .clients-action-view-active:after, .jobs-action-view-active:after, .invoice-action-view-active:after, .settings-hero-edit:after, .settings-hero-add:after, .settings-hero-delete:after, .clients-data-content-item-action-edit:after, .clients-data-content-item-action-delete:after, .jobs-data-content-item-action-edit:after, .jobs-data-content-item-action-delete:after, .signup-submit:after, .login-submit:after, .clients-form-submit:after, .jobs-form-submit:after, .home-convert-item:after, .signup-services-select:after, .signup-services-button:after, .signup-select:after, .dash-nav-item:after, .settings-hero-content-save:after, .invoice-form-item:after, .multiSelect > button:hover:after {
+.clients-action-add:after, .jobs-action-add:after, .invoice-action-add:after, .clients-action-active:after, .jobs-action-add-active:after, .invoice-action-add-active:after, .clients-action-view:after, .jobs-action-view:after, .invoice-action-view:after, .clients-action-view-active:after, .jobs-action-view-active:after, .invoice-action-view-active:after, .settings-hero-edit:after, .settings-hero-add:after, .settings-hero-delete:after, .clients-data-content-item-action-edit:after, .clients-data-content-item-action-delete:after, .jobs-data-content-item-action-edit:after, .jobs-data-content-item-action-delete:after, .signup-submit:after, .login-submit:after, .clients-form-submit:after, .jobs-form-submit:after, .home-convert-item:after, .signup-services-select:after, .signup-services-button:after, .signup-select:after, .dash-nav-item:after, .settings-hero-content-save:after, .invoice-form-item:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -237,7 +238,7 @@ html {
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
 }
-.clients-action-add:hover:after, .jobs-action-add:hover:after, .invoice-action-add:hover:after, .clients-action-active:hover:after, .jobs-action-add-active:hover:after, .invoice-action-add-active:hover:after, .clients-action-view:hover:after, .jobs-action-view:hover:after, .invoice-action-view:hover:after, .clients-action-view-active:hover:after, .jobs-action-view-active:hover:after, .invoice-action-view-active:hover:after, .settings-hero-edit:hover:after, .settings-hero-add:hover:after, .settings-hero-delete:hover:after, .clients-data-content-item-action-edit:hover:after, .clients-data-content-item-action-delete:hover:after, .jobs-data-content-item-action-edit:hover:after, .jobs-data-content-item-action-delete:hover:after, .signup-submit:hover:after, .login-submit:hover:after, .clients-form-submit:hover:after, .jobs-form-submit:hover:after, .home-convert-item:hover:after, .signup-services-select:hover:after, .signup-services-button:hover:after, .signup-select:hover:after, .dash-nav-item:hover:after, .settings-hero-content-save:hover:after, .invoice-form-item:hover:after, .multiSelect > button:hover:after {
+.clients-action-add:hover:after, .jobs-action-add:hover:after, .invoice-action-add:hover:after, .clients-action-active:hover:after, .jobs-action-add-active:hover:after, .invoice-action-add-active:hover:after, .clients-action-view:hover:after, .jobs-action-view:hover:after, .invoice-action-view:hover:after, .clients-action-view-active:hover:after, .jobs-action-view-active:hover:after, .invoice-action-view-active:hover:after, .settings-hero-edit:hover:after, .settings-hero-add:hover:after, .settings-hero-delete:hover:after, .clients-data-content-item-action-edit:hover:after, .clients-data-content-item-action-delete:hover:after, .jobs-data-content-item-action-edit:hover:after, .jobs-data-content-item-action-delete:hover:after, .signup-submit:hover:after, .login-submit:hover:after, .clients-form-submit:hover:after, .jobs-form-submit:hover:after, .home-convert-item:hover:after, .signup-services-select:hover:after, .signup-services-button:hover:after, .signup-select:hover:after, .dash-nav-item:hover:after, .settings-hero-content-save:hover:after, .invoice-form-item:hover:after {
   visibility: visible;
   -moz-transform: scaleX(1);
   -ms-transform: scaleX(1);
@@ -2044,284 +2045,191 @@ html {
   cursor: pointer;
 }
 
-/*
- * Don't modify things marked with ! - unless you know what you're doing
+/*!
+ * Pikaday
+ * Copyright © 2014 David Bushell | BSD & MIT license | http://dbushell.com/
  */
-.multiSelect {
+.pika-single {
+  z-index: 9999;
+  display: block;
   position: relative;
-}
-
-/* ! vertical layout */
-.multiSelect .vertical {
-  float: none;
-}
-
-/* ! horizontal layout */
-.multiSelect .horizontal:not(.multiSelectGroup) {
-  float: left;
-}
-
-/* ! create a "row" */
-.multiSelect .line {
-  padding: 2px 0px 4px 0px;
-  max-height: 30px;
-  overflow: hidden;
-  box-sizing: content-box;
-}
-
-/* ! create a "column" */
-.multiSelect .acol {
-  display: inline-block;
-  min-width: 12px;
-}
-
-/* ! */
-.multiSelect .inlineBlock {
-  display: inline-block;
-}
-
-/* the multiselect button */
-.multiSelect > button {
-  display: inline-block;
-  position: relative;
-  text-align: left;
-  cursor: pointer;
-  border: 0.1em solid #708e4e;
-  padding: 1px 8px 1px 8px;
-  min-height: 38px !important;
-  background: transparent;
-  border-radius: .25em;
   color: #2c2c2c;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  white-space: normal;
-}
-
-/* button: hover */
-.multiSelect > button:hover:after {
-  background-color: rgba(160, 186, 130, 0.25);
-}
-
-/* button: disabled */
-.multiSelect > button:disabled {
-  background-image: linear-gradient(#ffffff, #ffffff);
-  border: 1px solid #ddd;
-  color: #999;
-}
-
-/* button: clicked */
-.multiSelect .buttonClicked {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-/* labels on the button */
-.multiSelect .buttonLabel {
-  display: inline-block;
-  padding: 5px 0px 5px 0px;
-}
-
-/* downward pointing arrow */
-.multiSelect .caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin: 0px 0px 1px 12px  !important;
-  vertical-align: middle;
-  border-top: 4px solid #333;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-  border-bottom: 0 dotted;
-}
-
-/* the main checkboxes and helper layer */
-.multiSelect .checkboxLayer {
-  background-color: #fff;
-  position: absolute;
-  top: -305px;
-  z-index: 999;
-  border: 0.1em solid #708e4e;
-  border-radius: 4px;
-  -moz-box-shadow: 2px 2px 4px 0px rgba(27, 87, 90, 0.17);
-  -webkit-box-shadow: 2px 2px 4px 0px rgba(27, 87, 90, 0.17);
-  box-shadow: 2px 2px 4px 0px rgba(27, 87, 90, 0.17);
-  min-width: 278px;
-  display: none !important;
-}
-
-/* container of helper elements */
-.multiSelect .helperContainer {
-  border-bottom: 0.1em solid rgba(112, 142, 78, 0.5);
-  padding: 8px 8px 0px 8px;
-}
-
-/* helper buttons (select all, none, reset); */
-.multiSelect .helperButton {
-  display: inline;
-  text-align: center;
-  cursor: pointer;
-  border: 0.1em solid rgba(112, 142, 78, 0.5);
-  height: 26px;
+  background: whitesmoke;
   border-radius: .25em;
-  background-color: rgba(112, 142, 78, 0.25);
-  line-height: 1.6;
-  margin: 0px 0px 8px 0px;
+  border: 0.1em solid rgba(40, 130, 134, 0.75);
 }
-
-.multiSelect .helperButton.reset {
-  float: right;
+.pika-single.is-hidden {
+  display: none;
 }
-
-.multiSelect .helperButton:not(.reset) {
-  margin-right: 4px;
-}
-
-/* clear button */
-.multiSelect .clearButton {
+.pika-single.is-bound {
   position: absolute;
-  display: inline;
-  text-align: center;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  height: 22px;
-  width: 22px;
-  font-size: 13px;
-  border-radius: 2px;
-  color: #666;
-  background-color: #f1f1f1;
-  line-height: 1.4;
-  right: 2px;
-  top: 4px;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
-/* filter */
-.multiSelect .inputFilter {
-  border-radius: 2px;
-  border: 1px solid #ccc;
-  height: 26px;
-  font-size: 14px;
-  width: 100%;
-  padding-left: 7px;
-  -webkit-box-sizing: border-box;
-  /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;
-  /* Firefox, other Gecko */
-  box-sizing: border-box;
-  /* Opera/IE 8+ */
-  color: #888;
-  margin: 0px 0px 8px 0px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+.pika-single {
+  *zoom: 1;
 }
-
-/* helper elements on hover & focus */
-.multiSelect .clearButton:hover,
-.multiSelect .helperButton:hover {
-  background: rgba(160, 186, 130, 0.75);
+.pika-single:before, .pika-single:after {
+  content: " ";
+  display: table;
 }
-
-.multiSelect .helperButton:disabled {
-  color: #ccc;
-  border: 1px solid #ddd;
-}
-
-/* container of multi select items */
-.multiSelect .checkBoxContainer {
-  display: block;
-  padding: 8px;
-  overflow: hidden;
-}
-
-/* ! to show / hide the checkbox layer above */
-.multiSelect .show {
-  display: block !important;
-}
-
-/* item labels */
-.multiSelect .multiSelectItem {
-  display: block;
-  padding: 3px;
-  white-space: nowrap;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  border: 1px solid transparent;
-  position: relative;
-  min-width: 278px;
-  min-height: 32px;
-}
-
-/* Styling on selected items */
-.multiSelect .multiSelectItem:not(.multiSelectGroup).selected {
-  background: rgba(160, 186, 130, 0.25);
-  cursor: pointer;
-  border: 0.1em solid rgba(160, 186, 130, 0.5);
-}
-
-.multiSelect .multiSelectItem .acol label {
-  display: inline-block;
-  padding-right: 30px;
-  margin: 0px;
-  font-weight: normal;
-  line-height: normal;
-}
-
-/* item labels focus on mouse hover */
-.multiSelect .multiSelectItem:hover,
-.multiSelect .multiSelectGroup:hover {
-  background: rgba(160, 186, 130, 0.25);
-  cursor: pointer;
-}
-
-/* item labels focus using keyboard */
-.multiSelect .multiSelectFocus {
-  background: #a0ba82;
-  cursor: pointer;
-}
-
-/* change mouse pointer into the pointing finger */
-.multiSelect .multiSelectItem span:hover,
-.multiSelect .multiSelectGroup span:hover {
-  cursor: pointer;
-}
-
-/* ! group labels */
-.multiSelect .multiSelectGroup {
-  display: block;
+.pika-single:after {
   clear: both;
 }
 
-/* right-align the tick mark (&#10004;) */
-.multiSelect .tickMark {
-  position: absolute;
-  right: 10px;
-  font-size: 14px;
+.pika-lendar {
+  float: left;
+  width: 240px;
+  margin: 8px;
 }
 
-/* hide the original HTML checkbox away */
-.multiSelect .checkbox {
-  color: #ddd !important;
-  position: absolute;
-  left: -9999px;
+.pika-title {
+  position: relative;
+  text-align: center;
+}
+.pika-title select {
   cursor: pointer;
+  position: absolute;
+  z-index: 9998;
+  margin: 0;
+  left: 0;
+  top: 5px;
+  filter: alpha(opacity=0);
+  opacity: 0;
 }
 
-/* checkboxes currently disabled */
-.multiSelect .disabled,
-.multiSelect .disabled:hover,
-.multiSelect .disabled label input:hover ~ span {
-  color: #c4c4c4 !important;
-  cursor: not-allowed !important;
+.pika-label {
+  display: inline-block;
+  *display: inline;
+  position: relative;
+  z-index: 9999;
+  overflow: hidden;
+  margin: 0;
+  padding: 5px 3px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  background-color: whitesmoke;
 }
 
-/* If you use images in button / checkbox label, you might want to change the image style here. */
-.multiSelect img {
-  vertical-align: middle;
-  margin-bottom: 0px;
-  max-height: 22px;
-  max-width: 22px;
+.pika-prev,
+.pika-next {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: 0;
+  padding: 0;
+  width: 20px;
+  height: 30px;
+  text-indent: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 75% 75%;
+  opacity: .5;
+  *position: absolute;
+  *top: 0;
+}
+.pika-prev:hover,
+.pika-next:hover {
+  opacity: 1;
+}
+.pika-prev.is-disabled,
+.pika-next.is-disabled {
+  cursor: default;
+  opacity: .2;
+}
+
+.pika-prev,
+.is-rtl .pika-next {
+  float: left;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==");
+  *left: 0;
+}
+
+.pika-next,
+.is-rtl .pika-prev {
+  float: right;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=");
+  *right: 0;
+}
+
+.pika-select {
+  display: inline-block;
+  *display: inline;
+}
+
+.pika-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0;
+}
+.pika-table th,
+.pika-table td {
+  width: 14.285714285714286%;
+  padding: 0;
+}
+.pika-table th {
+  color: #607d8b;
+  font-size: 12px;
+  line-height: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+.pika-table abbr {
+  border-bottom: none;
+  cursor: help;
+}
+
+.pika-button {
+  cursor: pointer;
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  padding: 5px;
+  color: #666;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+  background: #f5f5f5;
+}
+.is-today .pika-button {
+  color: #288286;
+  font-weight: bold;
+  background: rgba(40, 130, 134, 0.05);
+  border-radius: 3px;
+  border: 0.1em solid rgba(40, 130, 134, 0.75);
+}
+.is-selected .pika-button {
+  color: whitesmoke;
+  font-weight: bold;
+  color: #288286;
+  background: rgba(40, 130, 134, 0.05);
+  box-shadow: inset 0 1px 3px #226e72;
+  border-radius: 3px;
+}
+.is-disabled .pika-button {
+  pointer-events: none;
+  cursor: default;
+  color: #999;
+  opacity: .3;
+}
+.pika-button:hover {
+  color: #2c2c2c !important;
+  background: rgba(40, 130, 134, 0.2) !important;
+  box-shadow: none !important;
+  border-radius: 3px !important;
+}
+
+.pika-week {
+  font-size: 11px;
+  color: #999;
 }

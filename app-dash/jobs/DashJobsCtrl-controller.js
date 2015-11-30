@@ -5,7 +5,7 @@
     .module('nickoDash.dash')
     .controller('DashJobsCtrl', DashJobsCtrl);
 
-  function DashJobsCtrl($scope, $location, $window, dashDataSortFilter, fetchJobs, fetchStates, fetchServices) { // fetchJobFreqs clientsList jobsAdd
+  function DashJobsCtrl($scope, $location, $window, dashDataSortFilter, fetchJobs, fetchStates, fetchServices, fetchJobFreqs, clientsList) { //, jobsAdd
     /*jshint validthis: true */
     var dashJobs = this;
     dashJobs.toggle = {switch: true};
@@ -14,8 +14,8 @@
     jobList();
     statesList();
     servicesList();
-    // clientList();
-    // frequenciesList();
+    clientList();
+    jobFrequency();
     // createJob();
 
     ////////////////
@@ -36,16 +36,34 @@
 
     function statesList() {
       fetchStates.unitedStates()
-        .then(function (usStatesList) {
-          dashJobs.states = usStatesList;
+        .then(function (usStatesListData) {
+          dashJobs.states = usStatesListData;
         });
     }
 
     function servicesList() {
       fetchServices.serviceList()
-        .then(function (services) {
-            dashJobs.services = services;
-        })
+        .then(function (servicesListData) {
+            dashJobs.services = servicesListData;
+        });
+    }
+
+    function clientList() {
+      clientsList.fetchClients()
+        .then(function (clientsListData) {
+          var pickMeClient = {
+            fullname: 'Pick A Client'
+          };
+          clientsListData.splice(0, 0, pickMeClient);
+          dashJobs.clients = clientsListData;
+        });
+    }
+
+    function jobFrequency() {
+      fetchJobFreqs.frequencyList()
+        .then(function (jobFreqsData) {
+          dashJobs.frequencies = jobFreqsData;
+        });
     }
 
   }

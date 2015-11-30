@@ -5,7 +5,7 @@
     .module('nickoDash.dash')
     .controller('DashClientsCtrl', DashClientsCtrl);
 
-  function DashClientsCtrl($scope, $location, $window,  dashDataSortFilter, clientsList, fetchInvoiceOptions, fetchStates, fetchJobFreqs, fetchJobTypes, clientsAdd) {
+  function DashClientsCtrl($scope, $location, $window,  dashDataSortFilter, clientsList, fetchInvoiceOptions, fetchStates, clientsAdd) { //fetchJobFreqs, fetchJobTypes,
     /*jshint validthis: true */
     var dashClients = this;
     dashClients.toggle = {switch: true};
@@ -15,25 +15,11 @@
     innerViewToggle();
     invoiceOccurrence();
     statesList();
-    jobFrequency();
-    jobType();
+    // jobFrequency();
+    // jobType();
     createClient();
 
     ////////////////
-
-    // function refreshKey() {
-    //   var dashView = $location.path();
-    //   if (dashView = '/dashboard/clients') {
-    //     angular.element($window).bind('keydown keyup', function (event) {
-    //       if (event.which === 116 || event.keyCode === 116) {
-    //         $scope.$apply(function () {
-    //           // event.preventDefault();
-    //           $location.path('/dashboard/');
-    //         });
-    //       }
-    //     });
-    //   };
-    // }
 
     function innerViewToggle() {
       $scope.switchSubView = function () {
@@ -63,19 +49,19 @@
         });
     }
 
-    function jobType() {
-      fetchJobTypes.typeList()
-        .then(function (jobTypes) {
-          dashClients.jobTypes = jobTypes;
-        });
-    }
+    // function jobType() {
+    //   fetchJobTypes.typeList()
+    //     .then(function (jobTypes) {
+    //       dashClients.jobTypes = jobTypes;
+    //     });
+    // }
 
-    function jobFrequency() {
-      fetchJobFreqs.frequencyList()
-        .then(function (jobFreqs) {
-          dashClients.jobFreqs = jobFreqs;
-        });
-    }
+    // function jobFrequency() {
+    //   fetchJobFreqs.frequencyList()
+    //     .then(function (jobFreqs) {
+    //       dashClients.jobFreqs = jobFreqs;
+    //     });
+    // }
 
     function createClient() {
 

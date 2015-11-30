@@ -16,6 +16,16 @@
 
     function createJob(dataFromForm) {
 
+      //let;s make firebase happy, no special characters in keys:
+      delete dataFromForm.client.$id;
+      delete dataFromForm.client.$priority;
+      delete dataFromForm.frequency.$id;
+      delete dataFromForm.frequency.$priority;
+      delete dataFromForm.service.$id;
+      delete dataFromForm.service.$priority;
+      delete dataFromForm.state.$id;
+      delete dataFromForm.state.$priority
+
       var rootRef = new Firebase(fbRootUrl);
       var userToken = $cookies.get('ATOK');
       var jobID = moment().unix();
@@ -31,6 +41,7 @@
 
       .then(function (authData) {
         rootRef.child('userJobs').child(authData.uid).child('job' + ':' + jobID).set(completeData);
+
         return authData;
       })
 
@@ -51,6 +62,7 @@
         freqSet[jobProp] = true;
 
         rootRef.child('userJobOccurrence').child(freqID).child(userUID).update(freqSet);
+
         return 'data';
       })
 

@@ -19,10 +19,10 @@
       //let;s make firebase happy, no special characters in keys:
       delete dataFromForm.invoiceOccurrence.$id;
       delete dataFromForm.invoiceOccurrence.$priority;
-      delete dataFromForm.jobFreq.$id;
-      delete dataFromForm.jobFreq.$priority;
-      delete dataFromForm.jobType.$id;
-      delete dataFromForm.jobType.$priority;
+      // delete dataFromForm.jobFreq.$id;
+      // delete dataFromForm.jobFreq.$priority;
+      // delete dataFromForm.jobType.$id;
+      // delete dataFromForm.jobType.$priority;
       delete dataFromForm.state.$id;
       delete dataFromForm.state.$priority
 
@@ -45,22 +45,22 @@
 
         .then(function (userUID) {
           var occID = completeData.invoiceOccurrence.id;
-          var freqID = completeData.jobFreq.id;
-          var typeID = completeData.jobType.id;
+          // var freqID = completeData.jobFreq.id;
+          // var typeID = completeData.jobType.id;
 
           var clientProp = 'client' + ':' + clientID.toString();
 
           var clientSet = {};
-          var jobFreqSet = {};
-          var jobTypeSet = {};
+          // var jobFreqSet = {};
+          // var jobTypeSet = {};
 
           clientSet[clientProp] = true;
-          jobFreqSet[clientProp] = true;
-          jobTypeSet[clientProp] = true;
+          // jobFreqSet[clientProp] = true;
+          // jobTypeSet[clientProp] = true;
 
           rootRef.child('userInvoiceOccurrence').child(occID).child(userUID).update(clientSet);
-          rootRef.child('userJobOccurrence').child(freqID).child(userUID).update(jobFreqSet);
-          rootRef.child('userJobType').child(typeID).child(userUID).update(jobTypeSet);
+          // rootRef.child('userJobOccurrence').child(freqID).child(userUID).update(jobFreqSet);
+          // rootRef.child('userJobType').child(typeID).child(userUID).update(jobTypeSet);
 
           return 'data';
         })

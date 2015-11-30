@@ -155,30 +155,12 @@
         </ng-messages>
       </fieldset>
 
-      <!-- Job Type -->
-      <fieldset class="clients-form-field-small">
-        <select name="jobType" data-ng-model="dashClients.newcustomer.jobType" data-ng-keyup="cancel($event)" data-ng-options="jobType.type for jobType in dashClients.jobTypes track by jobType.$id" class="clients-form-select">
-        </select>
-        <ng-messages for="dashClients.newCustomer.jobType.$error" class="clients-form-messages">
-          <p data-ng-class="{ 'clients-form-messages-valid':dashClients.newCustomer.jobType.$dirty}" class="clients-form-messages-hide-valid">Cool, looks good!</p>
-        </ng-messages>
-      </fieldset>
-
       <!-- Invoicing Frequency -->
       <fieldset class="clients-form-field-small">
         <select name="occurrence" data-ng-model="dashClients.newcustomer.invoiceOccurrence" data-ng-keyup="cancel($event)" data-ng-options="occurrence.name for occurrence in dashClients.occurrences track by occurrence.$id" class="clients-form-select">
         </select>
         <ng-messages for="dashClients.newCustomer.occurrence.$error" class="signup-messages">
           <p data-ng-class="{ 'clients-form-messages-valid':dashClients.newCustomer.occurrence.$dirty}" class="clients-form-messages-hide-valid">Cool, looks good!</p>
-        </ng-messages>
-      </fieldset>
-
-      <!-- Job Frequency -->
-      <fieldset class="clients-form-field-small">
-        <select name="jobFreq" data-ng-model="dashClients.newcustomer.jobFreq" data-ng-keyup="cancel($event)" data-ng-options="jobFreq.name for jobFreq in dashClients.jobFreqs track by jobFreq.$id" class="clients-form-select">
-        </select>
-        <ng-messages for="dashClients.newCustomer.jobFreq.$error" class="clients-form-messages">
-          <p data-ng-class="{ 'clients-form-messages-valid':dashClients.newCustomer.jobFreq.$dirty}" class="clients-form-messages-hide-valid">Cool, looks good!</p>
         </ng-messages>
       </fieldset>
 
