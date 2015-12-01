@@ -200,28 +200,23 @@ function nicko_dash_scripts() {
     wp_enqueue_script('nickoDashConfig', get_template_directory_uri() . '/app-dash/bootstrap/assortedConfigs-config.js', array(), null, true);
     wp_enqueue_script('nickoDashRouting', get_template_directory_uri() . '/app-dash/bootstrap/viewRouting-config.js', array(), null, true);
 
-    wp_enqueue_script('nickoDashUtilis', get_template_directory_uri() . '/app-dash/utilities/nickoDash-utils-module.js', array(), null, true);
-
-    wp_enqueue_script('nickoDashResponsive', get_template_directory_uri() . '/app-dash/utilities/global/responsiveTrigger-directive.js', array(), null, true);
-    wp_enqueue_script('nickoDashInputField', get_template_directory_uri() . '/app-dash/utilities/global/inputFieldDisplay-directive.js', array(), null, true);
-    wp_enqueue_script('nickoDashPreventEnter', get_template_directory_uri() . '/app-dash/utilities/global/preventEnter-directive.js', array(), null, true);
-    wp_enqueue_script('nickoDashButtonClick', get_template_directory_uri() . '/app-dash/utilities/global/buttonClick-directive.js', array(), null, true);
-    wp_enqueue_script('nickoDashDataSort', get_template_directory_uri() . '/app-dash/utilities/global/dashDataSort-filter.js', array(), null, true);
-
-    wp_enqueue_script('nickoDashFetchClients', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchClients-factory.js', array(), null, true);
-    wp_enqueue_script('nickoDashFetchInvoiceOptions', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchInvoiceOptions-factory.js', array(), null, true);
-    wp_enqueue_script('nickoDashFetchJobFreqs', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchJobFreqs-factory.js', array(), null, true);
-    wp_enqueue_script('nickoDashFetchJobTypes', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchJobTypes-factory.js', array(), null, true);
-    wp_enqueue_script('nickoDashFetchStates', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchStates-factory.js', array(), null, true);
-    wp_enqueue_script('nickoDashFetchJobs', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchJobs-factory.js', array(), null, true);
-    wp_enqueue_script('nickoDashFetchServices', get_template_directory_uri() . '/app-dash/utilities/global/fetch/fetchServices-factory.js', array(), null, true);
-
-    wp_enqueue_script('nickoDashFirebaseURL', get_template_directory_uri() . '/app-dash/utilities/firebase/root-url-constant.js', array(), null, true);
-    wp_enqueue_script('nickoDashCrewStore', get_template_directory_uri() . '/app-dash/utilities/stores/crewLeaderStore-factory.js', array(), null, true);
-
     wp_enqueue_script('nickoDashModule', get_template_directory_uri() . '/app-dash/nickoDash-dash-module.js', array(), null, true);
 
-
+    wp_enqueue_script('nickoDashUtilis', get_template_directory_uri() . '/app-dash/global/nickoDash-utils-module.js', array(), null, true);
+    wp_enqueue_script('nickoDashResponsive', get_template_directory_uri() . '/app-dash/global/responsiveTrigger-directive.js', array(), null, true);
+    wp_enqueue_script('nickoDashInputField', get_template_directory_uri() . '/app-dash/global/inputFieldDisplay-directive.js', array(), null, true);
+    wp_enqueue_script('nickoDashPreventEnter', get_template_directory_uri() . '/app-dash/global/preventEnter-directive.js', array(), null, true);
+    wp_enqueue_script('nickoDashButtonClick', get_template_directory_uri() . '/app-dash/global/buttonClick-directive.js', array(), null, true);
+    wp_enqueue_script('nickoDashDataSort', get_template_directory_uri() . '/app-dash/global/dashDataSort-filter.js', array(), null, true);
+    wp_enqueue_script('nickoDashFetchClients', get_template_directory_uri() . '/app-dash/global/fetch/fetchClients-factory.js', array(), null, true);
+    wp_enqueue_script('nickoDashFetchInvoiceOptions', get_template_directory_uri() . '/app-dash/global/fetch/fetchInvoiceOptions-factory.js', array(), null, true);
+    wp_enqueue_script('nickoDashFetchJobFreqs', get_template_directory_uri() . '/app-dash/global/fetch/fetchJobFreqs-factory.js', array(), null, true);
+    wp_enqueue_script('nickoDashFetchJobTypes', get_template_directory_uri() . '/app-dash/global/fetch/fetchJobTypes-factory.js', array(), null, true);
+    wp_enqueue_script('nickoDashFetchStates', get_template_directory_uri() . '/app-dash/global/fetch/fetchStates-factory.js', array(), null, true);
+    wp_enqueue_script('nickoDashFetchJobs', get_template_directory_uri() . '/app-dash/global/fetch/fetchJobs-factory.js', array(), null, true);
+    wp_enqueue_script('nickoDashFetchServices', get_template_directory_uri() . '/app-dash/global/fetch/fetchServices-factory.js', array(), null, true);
+    wp_enqueue_script('nickoDashFirebaseURL', get_template_directory_uri() . '/app-dash/global/firebase/root-url-constant.js', array(), null, true);
+    wp_enqueue_script('nickoDashCrewStore', get_template_directory_uri() . '/app-dash/global/stores/crewLeaderStore-factory.js', array(), null, true);
     wp_enqueue_script('nickoDashUCM', get_template_directory_uri() . '/app-dash/global/userCompanyMeta-factory.js', array(), null, true);
     wp_enqueue_script('nickoCompanyHeader', get_template_directory_uri() . '/app-dash/global/companyNameHeader-directive.js', array(), null, true);
     wp_enqueue_script('nickoDashViewBtn', get_template_directory_uri() . '/app-dash/global/subViewButton-directive.js', array(), null, true);
@@ -237,7 +232,9 @@ function nicko_dash_scripts() {
     wp_enqueue_script('nickoDashAddJob', get_template_directory_uri() . '/app-dash/jobs/jobsAdd-factory.js', array(), null, true);
 
     wp_enqueue_script('nickoDashInvoicesCtrl', get_template_directory_uri() . '/app-dash/invoices/DashInvoicesCtrl-controller.js', array(), null, true);
+
     wp_enqueue_script('nickoDashSettingsCtrl', get_template_directory_uri() . '/app-dash/settings/DashSettingsCtrl-controller.js', array(), null, true);
+
     wp_enqueue_script('nickoDashHelpCtrl', get_template_directory_uri() . '/app-dash/help/DashHelpCtrl-controller.js', array(), null, true);
 
 

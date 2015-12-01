@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('nickoDash.dash')
+    .module('nickoDash.utils')
     .controller('DashCtrl', DashCtrl);
 
   function DashCtrl($scope, $location, $window) {

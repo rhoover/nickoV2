@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('nickoDash.dash')
+    .module('nickoDash.utils')
     .directive('viewButton', viewButton);
 
   function viewButton () {
