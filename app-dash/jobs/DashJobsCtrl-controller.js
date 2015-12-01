@@ -5,7 +5,7 @@
     .module('nickoDash.dash')
     .controller('DashJobsCtrl', DashJobsCtrl);
 
-  function DashJobsCtrl($scope, $location, $window, dashDataSortFilter, fetchJobs, fetchStates, fetchServices, fetchJobFreqs, clientsList) { //, jobsAdd
+  function DashJobsCtrl($scope, dashDataSortFilter, fetchJobs, fetchStates, fetchServices, fetchJobFreqs, clientsList, jobsAdd) {
     /*jshint validthis: true */
     var dashJobs = this;
     dashJobs.toggle = {switch: true};
@@ -16,7 +16,7 @@
     servicesList();
     clientList();
     jobFrequency();
-    // createJob();
+    createJob();
 
     ////////////////
 
@@ -64,6 +64,25 @@
         .then(function (jobFreqsData) {
           dashJobs.frequencies = jobFreqsData;
         });
+    }
+
+    function createJob() {
+      dashJobs.createNewJob = function (dataFromForm) {
+        jobsAdd.createJob(dataFromForm)
+          .then(function () {
+            dashJobs.newjob = null;
+            $scope.$evalAsync(function () {
+              fetchJobs.jobsList()
+                .then(function (jobsListData) {
+                  var sortedDsc = dashDataSortFilter.sortDsc(jobsListData);
+                  dashJobs.jobs = sortedDsc;
+                  $scope.switchSubView = function () {
+                    dashJobs.toggle.switch = !dashJobs.toggle.switch;
+                  }
+                });
+            });
+          });
+      }
     }
 
   }

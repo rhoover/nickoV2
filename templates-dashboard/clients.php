@@ -155,6 +155,15 @@
         </ng-messages>
       </fieldset>
 
+      <!-- Job Type -->
+      <fieldset class="clients-form-field-small">
+        <select name="jobType" data-ng-model="dashClients.newcustomer.jobType" data-ng-keyup="cancel($event)" data-ng-options="jobType.type for jobType in dashClients.jobTypes track by jobType.$id" class="clients-form-select">
+        </select>
+        <ng-messages for="dashClients.newCustomer.jobType.$error" class="clients-form-messages">
+          <p data-ng-class="{ 'clients-form-messages-valid':dashClients.newCustomer.jobType.$dirty}" class="clients-form-messages-hide-valid">Cool, looks good!</p>
+        </ng-messages>
+      </fieldset>
+
       <!-- Invoicing Frequency -->
       <fieldset class="clients-form-field-small">
         <select name="occurrence" data-ng-model="dashClients.newcustomer.invoiceOccurrence" data-ng-keyup="cancel($event)" data-ng-options="occurrence.name for occurrence in dashClients.occurrences track by occurrence.$id" class="clients-form-select">
@@ -166,15 +175,15 @@
 
       <!-- Note -->
       <fieldset class="clients-form-field">
-          <input type="text" name="note" data-ng-model="dashClients.newcustomer.note" data-prevent-enter data-ng-keyup="cancel($event)" data-input-field-display data-ng-minlength="2" data-ng-maxlength="75" class="clients-form-input">
-          <label for="note" class="clients-form-label">
-              <span class="clients-form-label-text">Customer Note</span>
-          </label>
-          <ng-messages for="dashClients.newCustomer.note.$error" class="signup-messages">
-              <ng-message when="minlength" class="clients-form-messages-messages-generic">Too short, this needs to be at least two(2) characters long.</ng-message>
-              <ng-message when="maxlength" class="clients-form-messages-messages-generic">Too long, this needs to be less than fifty(50) characters long.</ng-message>
-              <p data-ng-class="{ 'clients-form-messages-valid':dashClients.newCustomer.note.$dirty}" class="clients-form-messages-hide-valid">Cool, looks good!</p>
-          </ng-messages>
+        <input type="text" name="note" data-ng-model="dashClients.newcustomer.note" data-prevent-enter data-ng-keyup="cancel($event)" data-input-field-display data-ng-minlength="2" data-ng-maxlength="75" class="clients-form-input">
+        <label for="note" class="clients-form-label">
+          <span class="clients-form-label-text">Customer Note</span>
+        </label>
+        <ng-messages for="dashClients.newCustomer.note.$error" class="signup-messages">
+          <ng-message when="minlength" class="clients-form-messages-messages-generic">Too short, this needs to be at least two(2) characters long.</ng-message>
+          <ng-message when="maxlength" class="clients-form-messages-messages-generic">Too long, this needs to be less than fifty(50) characters long.</ng-message>
+          <p data-ng-class="{ 'clients-form-messages-valid':dashClients.newCustomer.note.$dirty}" class="clients-form-messages-hide-valid">Cool, looks good!</p>
+        </ng-messages>
       </fieldset>
 
       <!-- Submit Button-->

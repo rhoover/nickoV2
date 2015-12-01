@@ -19,10 +19,8 @@
       //let;s make firebase happy, no special characters in keys:
       delete dataFromForm.invoiceOccurrence.$id;
       delete dataFromForm.invoiceOccurrence.$priority;
-      // delete dataFromForm.jobFreq.$id;
-      // delete dataFromForm.jobFreq.$priority;
-      // delete dataFromForm.jobType.$id;
-      // delete dataFromForm.jobType.$priority;
+      delete dataFromForm.jobType.$id;
+      delete dataFromForm.jobType.$priority;
       delete dataFromForm.state.$id;
       delete dataFromForm.state.$priority
 
@@ -39,28 +37,40 @@
       return $firebaseAuth(rootRef).$authWithCustomToken(userToken)
 
         .then(function (authData) {
-          rootRef.child('userClients').child(authData.uid).child('client' + ':' + clientID).set(completeData);
+          rootRef.child('userClients').child(authData.uid).child(clientID).set(completeData);
+
           return authData.uid;
         })
 
         .then(function (userUID) {
           var occID = completeData.invoiceOccurrence.id;
-          // var freqID = completeData.jobFreq.id;
-          // var typeID = completeData.jobType.id;
+          var occSet = {};
 
-          var clientProp = 'client' + ':' + clientID.toString();
+          occSet[clientID] = true;
 
-          var clientSet = {};
-          // var jobFreqSet = {};
-          // var jobTypeSet = {};
+          rootRef.child('userInvoiceOccurrence').child(occID).child(userUID).update(occSet);
 
-          clientSet[clientProp] = true;
-          // jobFreqSet[clientProp] = true;
-          // jobTypeSet[clientProp] = true;
+          return userUID;
+        })
 
-          rootRef.child('userInvoiceOccurrence').child(occID).child(userUID).update(clientSet);
-          // rootRef.child('userJobOccurrence').child(freqID).child(userUID).update(jobFreqSet);
-          // rootRef.child('userJobType').child(typeID).child(userUID).update(jobTypeSet);
+        .then(function (userUID) {
+          var typeID = completeData.jobType.id;
+          var typeSet = {};
+
+          typeSet[clientID] = true;
+
+          rootRef.child('userJobType').child(typeID).child(userUID).update(typeSet);
+
+          return userUID;
+        })
+
+        .then(function (userUID) {
+          var stateID = completeData.state.name;
+          var stateSet = {};
+
+          stateSet[clientID] = true;
+
+          rootRef.child('userStates').child(stateID).child(userUID).update(stateSet);
 
           return 'data';
         })

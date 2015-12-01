@@ -40,26 +40,37 @@
       return $firebaseAuth(rootRef).$authWithCustomToken(userToken)
 
       .then(function (authData) {
-        rootRef.child('userJobs').child(authData.uid).child('job' + ':' + jobID).set(completeData);
-
-        return authData;
-      })
-
-      .then(function (authData) {
-        var convertedDate = {
-          dateStamp: moment(completeData.date, "dddd, MMMM Do YYYY").unix()
-        };
-        rootRef.child('userJobs').child(authData.uid).child('job' + ':' + jobID).update(convertedDate);
+        rootRef.child('userJobs').child(authData.uid).child(jobID).set(completeData);
 
         return authData.uid;
       })
 
       .then(function (userUID) {
+        var convertedDate = {
+          dateStamp: moment(completeData.date, "dddd, MMMM Do YYYY").unix()
+        };
+
+        rootRef.child('userJobs').child(userUID).child(jobID).update(convertedDate);
+
+        return userUID;
+      })
+
+      .then(function (userUID) {
+        var serviceID = completeData.service.id;
+        var serviceSet = {};
+
+        serviceSet[jobID] = true;
+
+        rootRef.child('userServices').child(serviceID).child(userUID).update(serviceSet);
+
+        return userUID;
+      })
+
+      .then(function (userUID) {
         var freqID = completeData.frequency.id;
-        var jobProp = 'job' + ':' + jobID.toString();
         var freqSet = {};
 
-        freqSet[jobProp] = true;
+        freqSet[jobID] = true;
 
         rootRef.child('userJobOccurrence').child(freqID).child(userUID).update(freqSet);
 
@@ -67,7 +78,7 @@
       })
 
       .catch(function (error) {
-        console.log('Shit! Creating Client error:  ', error);
+        console.log('Shit! Creating Job error:  ', error);
       });
     }
   }

@@ -67,8 +67,7 @@
 
         <!-- Clients -->
         <fieldset class="jobs-form-field-small">
-          <select name="client" data-ng-model="dashJobs.newjob.client" data-ng-keyup="cancel($event)" data-ng-options="client.fullname for client in dashJobs.clients" data-required class="jobs-form-select">
-            <option value="" ng-if="false"></option>
+          <select name="client" data-ng-model="dashJobs.newjob.client" data-ng-keyup="cancel($event)" data-ng-options="client.fullname for client in dashJobs.clients track by client.$id" data-required class="jobs-form-select">
           </select>
           <ng-messages for="dashJobs.newJob.client.$error" class="jobs-form-messages">
             <ng-message when="required" class="jobs-form-messages-required">Required</ng-message>
@@ -76,10 +75,9 @@
           </ng-messages>
         </fieldset>
 
-        <!-- Service -->
+        <!-- Job Service -->
         <fieldset class="jobs-form-field-small">
-          <select name="service" data-ng-model="dashJobs.newjob.service" data-ng-keyup="cancel($event)" data-ng-options="service.service for service in dashJobs.services" data-required class="jobs-form-select">
-            <option value="" ng-if="false"></option>
+          <select name="service" data-ng-model="dashJobs.newjob.service" data-ng-keyup="cancel($event)" data-ng-options="service.service for service in dashJobs.services track by service.$id" data-required class="jobs-form-select">
           </select>
           <ng-messages for="dashJobs.newJob.service.$error" class="jobs-form-messages">
             <ng-message when="required" class="jobs-form-messages-required">Required</ng-message>
@@ -87,10 +85,9 @@
           </ng-messages>
         </fieldset>
 
-        <!-- Frequency -->
+        <!-- Job Frequency -->
         <fieldset class="jobs-form-field-small">
-          <select name="frequency" data-ng-model="dashJobs.newjob.frequency" data-ng-keyup="cancel($event)" data-ng-options="frequency.name for frequency in dashJobs.frequencies" data-required class="jobs-form-select">
-              <option value="" ng-if="false"></option>
+          <select name="frequency" data-ng-model="dashJobs.newjob.frequency" data-ng-keyup="cancel($event)" data-ng-options="frequency.name for frequency in dashJobs.frequencies track by frequency.$id" data-required class="jobs-form-select">
           </select>
           <ng-messages for="dashJobs.newJob.frequency.$error" class="jobs-form-messages">
             <ng-message when="required" class="jobs-form-messages-required">Required</ng-message>
@@ -155,8 +152,7 @@
 
         <!-- State -->
         <fieldset class="jobs-form-field-small">
-          <select name="state" data-ng-model="dashJobs.newjob.state" data-ng-keyup="cancel($event)" data-ng-options="state.name for state in dashJobs.states" class="jobs-form-select">
-            <option value="" ng-if="false"></option>
+          <select name="state" data-ng-model="dashJobs.newjob.state" data-ng-keyup="cancel($event)" data-ng-options="state.name for state in dashJobs.states track by state.$id" class="jobs-form-select">
           </select>
           <ng-messages for="dashJobs.newJob.state.$error" class="jobs-form-messages">
             <p data-ng-class="{ 'jobs-form-messages-valid':dashJobs.newJob.state.$dirty}" class="jobs-form-messages-hide-valid">Cool, looks good!</p>

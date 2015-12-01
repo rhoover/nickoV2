@@ -5,7 +5,7 @@
     .module('nickoDash.dash')
     .controller('DashClientsCtrl', DashClientsCtrl);
 
-  function DashClientsCtrl($scope, $location, $window,  dashDataSortFilter, clientsList, fetchInvoiceOptions, fetchStates, clientsAdd) { //fetchJobFreqs, fetchJobTypes,
+  function DashClientsCtrl($scope, dashDataSortFilter, clientsList, fetchInvoiceOptions, fetchStates, fetchJobTypes, clientsAdd) { //fetchJobFreqs, ,
     /*jshint validthis: true */
     var dashClients = this;
     dashClients.toggle = {switch: true};
@@ -16,7 +16,7 @@
     invoiceOccurrence();
     statesList();
     // jobFrequency();
-    // jobType();
+    jobType();
     createClient();
 
     ////////////////
@@ -49,12 +49,12 @@
         });
     }
 
-    // function jobType() {
-    //   fetchJobTypes.typeList()
-    //     .then(function (jobTypes) {
-    //       dashClients.jobTypes = jobTypes;
-    //     });
-    // }
+    function jobType() {
+      fetchJobTypes.typeList()
+        .then(function (jobTypes) {
+          dashClients.jobTypes = jobTypes;
+        });
+    }
 
     // function jobFrequency() {
     //   fetchJobFreqs.frequencyList()
@@ -67,7 +67,7 @@
 
       dashClients.createNewCustomer = function (dataFromForm) {
         clientsAdd.createClient(dataFromForm)
-          .then(function (switchData) {
+          .then(function () {
             dashClients.newcustomer = null;
             $scope.$evalAsync(function () {
               clientsList.fetchClients()
