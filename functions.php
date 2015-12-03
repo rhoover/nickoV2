@@ -223,6 +223,7 @@ function nicko_dash_scripts() {
     wp_enqueue_script('nickoDashCtrl', get_template_directory_uri() . '/app-dash/global/DashCtrl-controller.js', array(), null, true);
 
     wp_enqueue_script('nickoDashMenuNav', get_template_directory_uri() . '/app-dash/menu/menuNavButton-directive.js', array(), null, true);
+
     wp_enqueue_script('nickoDashHomeCtrl', get_template_directory_uri() . '/app-dash/home/DashHomeCtrl-controller.js', array(), null, true);
 
     wp_enqueue_script('nickoDashClientsCtrl', get_template_directory_uri() . '/app-dash/clients/DashClientsCtrl-controller.js', array(), null, true);

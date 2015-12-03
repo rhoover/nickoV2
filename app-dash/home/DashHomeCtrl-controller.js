@@ -1,19 +1,25 @@
 (function () {
-    'use strict';
+  'use strict';
 
-    angular
-        .module('nickoDash.dash')
-        .controller('DashHomeCtrl', DashHomeCtrl);
+  angular
+    .module('nickoDash.dash')
+    .controller('DashHomeCtrl', DashHomeCtrl);
 
-    function DashHomeCtrl() {
-        /*jshint validthis: true */
-        var dashHome = this;
+  function DashHomeCtrl(fetchJobs, dashDataSortFilter) {
+    /*jshint validthis: true */
+    var dashHome = this;
 
-        goForthAndBind();
+    jobsBlock();
 
-        ////////////////
+    ////////////////
 
-        function goForthAndBind() {
-        }
+    function jobsBlock() {
+      fetchJobs.jobsList()
+        .then(function (jobsListData) {
+          console.log(jobsListData);
+          var sortedDsc = dashDataSortFilter.sortDsc(jobsListData);
+          dashHome.jobs = sortedDsc;
+        })
     }
+  }
 })();

@@ -2,7 +2,14 @@
 
     <div class="dash-home-hero-jobs">
         <p class="dash-home-hero-header">Todays Jobs</p>
-        <div class="dash-home-hero-content-jobs"></div>
+        <div class="dash-home-hero-content-jobs">
+            <p data-ng-repeat="job in dashHome.jobs" class="dash-home-hero-jobs-item">
+                <span>{{::job.client.fullname}}</span><br />
+                <span>{{::job.street}}</span><br />
+                <span>{{::job.city}}, {{::job.state.abbreviation}}</span><br />
+                <span>{{::job.service.service}}</span>
+            </p>
+        </div>
     </div>
     <div class="dash-home-hero-invoices">
         <p class="dash-home-hero-header">Past-Due Invoices</p>

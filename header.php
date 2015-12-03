@@ -68,14 +68,15 @@
 
 <body class="body" <?php
     // echo "data-ng-app=\"nickoSite\"  ";
-    if (is_page( array('Home', 'Signup', 'Login', 'Details'))) {
+    // if (is_page( array('Home', 'Signup', 'Login', 'Details'))) {
+    if (!is_page( array('Dashboard', 'Field'))) {
         echo "data-ng-app=\"nickoSite\"  ";
     }
     elseif (is_page('Dashboard') ) {
         echo "data-ng-app=\"nickoDash\"  ";
-    }// else {
-        // echo "data-ng-app=\"nickoField\"  ";
-    // }
+    } elseif (is_page('Field') ) {
+        echo "data-ng-app=\"nickoField\"  ";
+    }
     ?>
 
 >

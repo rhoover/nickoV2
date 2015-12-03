@@ -5,6 +5,9 @@
             &-jobs {
                 @extend %dash-hero;
                 @include dash-hero(purple);
+                &-item {
+                    overflow: auto;
+                }
             }
             &-invoices {
                 @extend %dash-hero;
@@ -19,12 +22,15 @@
             }
             &-content {
                 &-jobs {
+                    @extend %dash-hero-content;
                     @include dash-hero-content(purple);
                 }
                 &-invoices {
+                    @extend %dash-hero-content;
                     @include dash-hero-content(orange);
                 }
                 &-revenue {
+                    @extend %dash-hero-content;
                     @include dash-hero-content(green);
                 }
             }

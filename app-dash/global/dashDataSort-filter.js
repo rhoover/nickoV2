@@ -32,5 +32,14 @@ angular
       });
       return sortedDsc;
     }
+
+    function sortDateDsc(dataInput) {
+      var sortedDsc = [];
+
+      sortedDateDsc = dataInput.sort(function (a, b) {
+          return (a.dateStamp > b.dateStamp) ? -1 : 1;
+      });
+      return sortedDateDsc;
+    }
   }
 })();
