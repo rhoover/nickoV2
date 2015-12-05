@@ -99,6 +99,7 @@
     <h4 class="signup-services-header">Company Services</h4>
     <p class="signup-services-text">Choose as many of the following as fit your company:</p>
     <p data-button-click="details.showServicesList()" class="signup-services-button">Select From Available Services</p>
+
     <section data-ng-form="cdServices"  class="signup-field">
         <div data-ng-class="{ 'signup-services-popup-show':details.show }" class="signup-services-popup">
             <p data-button-click="details.selectAll()" class="signup-services-select">Select All</p>

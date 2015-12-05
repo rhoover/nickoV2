@@ -9,7 +9,8 @@ angular
 
     var filterAPI = {
       sortAsc: sortAsc,
-      sortDsc: sortDsc
+      sortDsc: sortDsc,
+      sortDateDsc: sortDateDsc
     }
     return filterAPI;
 

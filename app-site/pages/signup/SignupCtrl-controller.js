@@ -1,33 +1,32 @@
 (function () {
-    'use strict';
+  'use strict';
 
-    angular
-        .module('nickoSite.pages')
-        .controller('SignupCtrl', SignupCtrl);
+  angular
+    .module('nickoSite.pages')
+    .controller('SignupCtrl', SignupCtrl);
 
-    function SignupCtrl($location, $window) {
-        /*jshint validthis: true */
-        var signup = this;
+  function SignupCtrl($location, signUp) {
+    /*jshint validthis: true */
+    var signup = this;
 
-        goForthAndBind();
+    initialSignUp();
 
-        ////////////////
+    ////////////////
 
-        function goForthAndBind() {
-            signup.success = false;
+    function initialSignUp() {
+      signup.success = false;
 
-            var hostDomain = $location.host();
-            // $window.location.href = hostDomain + '/details/';
+      // var hostDomain = $location.host();
 
 
-            // spk.createNewClient = function (dataFromForm) {
+      signup.createNewClient = function (dataFromForm) {
 
-            //     signUp.firebaseCreateUser(dataFromForm)
-            //         .then(function (data) {
-            //                 spk.success = true;
-            //                 $location.path('/signup/details');
-            //         });
-            // };
-        }
+      signUp.firebaseCreateUser(dataFromForm)
+        .then(function (data) {
+          signup.success = true;
+          $location.path('/details');
+        });
+      };
     }
+  }
 })();

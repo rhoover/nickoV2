@@ -664,6 +664,7 @@ html {
   float: left;
   margin-bottom: 1.5em;
   padding: 0 3.1328321%;
+  border: none;
 }
 @media (min-width: 64em) {
   .signup-field, .login-field {

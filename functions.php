@@ -173,15 +173,18 @@ if (file_exists($localConfig)) {
         wp_enqueue_script('nickoPreventEnter', get_template_directory_uri() . '/app-site/utilities/global/preventEnter-directive.js', array(), null, true);
         wp_enqueue_script('nickoButtonClick', get_template_directory_uri() . '/app-site/utilities/global/buttonClick-directive.js', array(), null, true);
         wp_enqueue_script('nickoFirebaseURL', get_template_directory_uri() . '/app-site/utilities/firebase/root-url-constant.js', array(), null, true);
-        wp_enqueue_script('nickoCompanyStore', get_template_directory_uri() . '/app-site/utilities/stores/userCompanyMetaStore-factory.js', array(), null, true);
-        wp_enqueue_script('nickoCrewStore', get_template_directory_uri() . '/app-site/utilities/stores/crewLeaderStore-factory.js', array(), null, true);
+
+        wp_enqueue_script('nickoAuthStoreL', get_template_directory_uri() . '/app-site/utilities/stores/authStore-factory.js', array(), null, true);
 
         wp_enqueue_script('nickoPages', get_template_directory_uri() . '/app-site/pages/nickoSite-pages-module.js', array(), null, true);
 
         wp_enqueue_script('nickoSignup', get_template_directory_uri() . '/app-site/pages/signup/SignupCtrl-controller.js', array(), null, true);
+        wp_enqueue_script('nickoSignUpFactory', get_template_directory_uri() . '/app-site/pages/signup/signUp-factory.js', array(), null, true);
         wp_enqueue_script('nickoWait', get_template_directory_uri() . '/app-site/pages/signup/buttonWait-directive.js', array(), null, true);
+
         wp_enqueue_script('nickoLogin', get_template_directory_uri() . '/app-site/pages/login/LoginCtrl-controller.js', array(), null, true);
         wp_enqueue_script('nickoLoginFactory', get_template_directory_uri() . '/app-site/pages/login/logIn-factory.js', array(), null, true);
+
         wp_enqueue_script('nickoLoginRoles', get_template_directory_uri() . '/app-site/pages/login/roleTest-factory.js', array(), null, true);
 
         wp_enqueue_script('nickoDetails', get_template_directory_uri() . '/app-site/pages/details/DetailsCtrl-controller.js', array(), null, true);

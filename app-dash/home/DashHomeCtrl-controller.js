@@ -17,7 +17,7 @@
       fetchJobs.jobsList()
         .then(function (jobsListData) {
           console.log(jobsListData);
-          var sortedDsc = dashDataSortFilter.sortDsc(jobsListData);
+          var sortedDsc = dashDataSortFilter.sortDateDsc(jobsListData);
           dashHome.jobs = sortedDsc;
         })
     }
